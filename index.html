@@ -1,1716 +1,1430 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Inmobiliaria Linda Vista | Bienes Raíces, Arquitectura e Ingeniería</title>
+<title>Inmobiliaria Linda Vista | Terrenos, Casas y Locales</title>
 
-<meta name="description" content="Inmobiliaria Linda Vista. Compra, venta y asesoría inmobiliaria. Terrenos, casas, arquitectura, ingeniería y servicios legales en Tlaxcala.">
+<meta name="description" content="Inmobiliaria Linda Vista. Venta de terrenos, lotes, casas y locales en Tlaxcala. Servicios inmobiliarios, arquitectura, ingeniería y asesoría legal.">
 
 <style>
-
-/* =========================
-   CONFIGURACIÓN GENERAL
-========================= */
+:root{
+    --azul:#071b35;
+    --azul2:#0d2c4f;
+    --dorado:#c9a227;
+    --dorado2:#e1c45b;
+    --blanco:#ffffff;
+    --gris:#f4f5f7;
+    --texto:#20252b;
+    --sombra:0 8px 25px rgba(0,0,0,.12);
+}
 
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    color:#222;
-    background:#f5f5f5;
+    background:var(--gris);
+    color:var(--texto);
     line-height:1.6;
 }
 
-a{
-    text-decoration:none;
-}
-
-img{
-    max-width:100%;
-}
-
-
-/* =========================
-   HEADER
-========================= */
+/* ================= HEADER ================= */
 
 header{
-    background:#071a33;
+    background:var(--azul);
     color:white;
-    padding:14px 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
     position:sticky;
     top:0;
     z-index:1000;
     box-shadow:0 3px 15px rgba(0,0,0,.25);
 }
 
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 25px;
+}
+
 .logo{
-    width:145px;
-    height:auto;
+    height:62px;
+    width:auto;
     object-fit:contain;
 }
 
 nav{
     display:flex;
-    align-items:center;
     gap:25px;
+    align-items:center;
 }
 
 nav a{
     color:white;
+    text-decoration:none;
     font-weight:bold;
-    font-size:15px;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#d4af37;
+    color:var(--dorado2);
 }
 
-
-/* =========================
-   HERO / FACHADA
-========================= */
+/* ================= HERO ================= */
 
 .hero{
-    min-height:650px;
-
+    min-height:600px;
     background:
-        linear-gradient(
-            rgba(5,18,36,.68),
-            rgba(5,18,36,.78)
-        ),
-        url("fachada-inmobiliaria%20pagina.jpg");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    linear-gradient(rgba(7,27,53,.65),rgba(7,27,53,.78)),
+    url("fachada-inmobiliaria%20pagina.jpg") center/cover no-repeat;
 
     display:flex;
     align-items:center;
     justify-content:center;
-
     text-align:center;
     color:white;
-
-    padding:70px 20px;
+    padding:80px 20px;
 }
 
 .hero-content{
-    max-width:900px;
+    max-width:850px;
 }
 
 .hero h1{
-    font-size:52px;
-    line-height:1.15;
-    margin-bottom:25px;
-    text-shadow:0 3px 10px rgba(0,0,0,.5);
+    font-size:clamp(38px,6vw,70px);
+    margin-bottom:15px;
+    letter-spacing:1px;
 }
 
 .hero h1 span{
-    color:#d4af37;
+    color:var(--dorado2);
 }
 
 .hero p{
-    font-size:20px;
-    max-width:780px;
-    margin:0 auto 35px;
-    text-shadow:0 2px 6px rgba(0,0,0,.6);
+    font-size:clamp(18px,3vw,25px);
+    margin-bottom:30px;
 }
 
 .btn{
     display:inline-block;
-    padding:13px 24px;
-    border-radius:6px;
+    background:var(--dorado);
+    color:white;
+    padding:14px 28px;
+    border-radius:7px;
+    text-decoration:none;
     font-weight:bold;
-    transition:.3s;
     margin:5px;
+    transition:.3s;
+    border:2px solid var(--dorado);
 }
 
-.btn-gold{
-    background:#d4af37;
-    color:#071a33;
-}
-
-.btn-gold:hover{
-    background:white;
-    transform:translateY(-2px);
-}
-
-.btn-outline{
-    border:2px solid white;
+.btn:hover{
+    background:transparent;
     color:white;
 }
 
-.btn-outline:hover{
-    background:white;
-    color:#071a33;
+.btn-outline{
+    background:transparent;
 }
 
+.btn-outline:hover{
+    background:var(--dorado);
+}
 
-/* =========================
-   SECCIONES
-========================= */
+/* ================= SECCIONES ================= */
 
 section{
-    padding:75px 6%;
+    padding:75px 20px;
+}
+
+.container{
+    max-width:1250px;
+    margin:auto;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:50px;
+    margin-bottom:45px;
 }
 
 .section-title h2{
-    color:#071a33;
-    font-size:36px;
-    margin-bottom:12px;
-}
-
-.section-title p{
-    max-width:750px;
-    margin:15px auto 0;
-    color:#666;
-}
-
-.section-line{
-    width:75px;
-    height:4px;
-    background:#d4af37;
-    margin:auto;
-}
-
-
-/* =========================
-   PROPIEDADES
-========================= */
-
-#propiedades{
-    background:#f7f7f7;
-}
-
-.properties{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(310px,1fr));
-    gap:28px;
-    max-width:1400px;
-    margin:auto;
-}
-
-.card{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.10);
-    transition:.3s;
-    border:1px solid #eee;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 12px 28px rgba(0,0,0,.16);
-}
-
-.card-image{
-    width:100%;
-    height:235px;
-    object-fit:cover;
-    display:block;
-    background:#dfe3e8;
-}
-
-.placeholder{
-    width:100%;
-    height:235px;
-    background:
-        linear-gradient(
-            135deg,
-            #071a33,
-            #183b64
-        );
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:25px;
-    font-size:18px;
-}
-
-.card-content{
-    padding:25px;
-}
-
-.badge{
-    display:inline-block;
-    background:#d4af37;
-    color:#071a33;
-    padding:5px 11px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:12px;
-}
-
-.card-content h3{
-    color:#071a33;
-    font-size:23px;
+    color:var(--azul);
+    font-size:38px;
     margin-bottom:10px;
 }
 
-.location{
-    color:#666;
-    font-size:15px;
-    margin-bottom:12px;
+.section-title .line{
+    width:80px;
+    height:4px;
+    background:var(--dorado);
+    margin:15px auto;
 }
 
-.price{
-    color:#a67c00;
-    font-size:23px;
-    font-weight:bold;
-    margin:14px 0;
-}
-
-.details{
-    border-top:1px solid #eee;
-    padding-top:12px;
-    margin-top:12px;
-}
-
-.details p{
-    margin:6px 0;
-    font-size:14px;
-}
-
-.whatsapp-btn{
-    display:block;
-    width:100%;
-    text-align:center;
-    background:#25D366;
-    color:white;
-    padding:13px;
-    border-radius:6px;
-    font-weight:bold;
-    margin-top:20px;
-    transition:.3s;
-}
-
-.whatsapp-btn:hover{
-    background:#1ebc59;
-    transform:translateY(-2px);
-}
-
-
-/* =========================
-   LOTES
-========================= */
-
-.lotes-list{
-    margin-top:15px;
-    border-top:1px solid #eee;
-    padding-top:12px;
-}
-
-.lote-row{
-    display:flex;
-    justify-content:space-between;
-    padding:6px 0;
-    border-bottom:1px solid #f0f0f0;
-    font-size:14px;
-}
-
-.lote-row strong{
-    color:#071a33;
-}
-
-.disponible{
-    color:#16853d;
-    font-weight:bold;
-}
-
-
-/* =========================
-   SERVICIOS
-========================= */
-
-.services{
-    background:#071a33;
-    color:white;
-}
-
-.services .section-title h2{
-    color:white;
-}
-
-.services .section-title p{
-    color:#d8d8d8;
-}
-
-.service-grid{
-    max-width:1300px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.service-box{
-    background:#102b4d;
-    border:1px solid rgba(212,175,55,.35);
-    border-radius:10px;
-    padding:30px;
-    transition:.3s;
-}
-
-.service-box:hover{
-    transform:translateY(-5px);
-    border-color:#d4af37;
-}
-
-.service-box h3{
-    color:#d4af37;
-    font-size:23px;
-    margin-bottom:18px;
-}
-
-.service-box ul{
-    padding-left:20px;
-}
-
-.service-box li{
-    margin:8px 0;
-}
-
-
-/* =========================
-   NOSOTROS
-========================= */
+/* ================= NOSOTROS ================= */
 
 .about{
     background:white;
 }
 
-.about-content{
-    max-width:950px;
-    margin:auto;
-    text-align:center;
-}
-
-.about-content h3{
-    color:#071a33;
-    font-size:29px;
-    margin-bottom:20px;
-}
-
-.about-content p{
-    margin-bottom:16px;
-    color:#555;
-}
-
-
-/* =========================
-   CONTACTO
-========================= */
-
-.contact{
-    background:#eeeeee;
-}
-
-.contact-grid{
-    max-width:1200px;
-    margin:auto;
+.about-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-
-.contact-box{
-    background:white;
-    border-radius:10px;
-    padding:30px 22px;
-    text-align:center;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-}
-
-.contact-box h3{
-    color:#071a33;
-    margin-bottom:15px;
-    font-size:21px;
-}
-
-.contact-box p{
-    margin:6px 0;
-}
-
-.phone{
-    font-size:20px;
-    font-weight:bold;
-    color:#071a33;
-}
-
-.contact-whatsapp{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    padding:10px 18px;
-    border-radius:5px;
-    margin-top:8px;
-    font-weight:bold;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#041122;
-    color:white;
-    text-align:center;
-    padding:35px 20px;
-}
-
-footer strong{
-    color:#d4af37;
-}
-
-footer p{
-    margin:5px 0;
-}
-
-
-/* =========================
-   WHATSAPP FLOTANTE
-========================= */
-
-.float-whatsapp{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-
-    width:62px;
-    height:62px;
-
-    border-radius:50%;
-
-    background:#25D366;
-    color:white;
-
-    display:flex;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
     align-items:center;
-    justify-content:center;
+}
 
+.about h3{
+    color:var(--azul);
     font-size:28px;
+    margin-bottom:15px;
+}
 
-    box-shadow:0 5px 18px rgba(0,0,0,.3);
+.about p{
+    margin-bottom:15px;
+}
 
-    z-index:999;
+.about-box{
+    background:var(--azul);
+    color:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:var(--sombra);
+}
 
+.about-box h3{
+    color:var(--dorado2);
+}
+
+.about-box ul{
+    list-style:none;
+}
+
+.about-box li{
+    padding:8px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+/* ================= SERVICIOS ================= */
+
+.services{
+    background:var(--gris);
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.service-card{
+    background:white;
+    padding:30px 22px;
+    border-radius:12px;
+    box-shadow:var(--sombra);
+    text-align:center;
     transition:.3s;
 }
 
-.float-whatsapp:hover{
-    transform:scale(1.08);
+.service-card:hover{
+    transform:translateY(-7px);
 }
 
+.service-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
 
-/* =========================
-   RESPONSIVE
-========================= */
+.service-card h3{
+    color:var(--azul);
+    margin-bottom:12px;
+}
 
-@media(max-width:850px){
+.service-card ul{
+    text-align:left;
+    padding-left:20px;
+}
 
-    header{
+/* ================= PROPIEDADES ================= */
+
+.properties{
+    background:white;
+}
+
+.filters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.filter-btn{
+    border:2px solid var(--azul);
+    background:white;
+    color:var(--azul);
+    padding:10px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:var(--azul);
+    color:white;
+}
+
+.property-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.property-card{
+    background:white;
+    border-radius:13px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+    border:1px solid #e4e4e4;
+    transition:.3s;
+}
+
+.property-card:hover{
+    transform:translateY(-6px);
+}
+
+.property-image{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
+
+.property-image.placeholder{
+    background:
+    linear-gradient(135deg,#071b35,#173d63);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:45px;
+}
+
+.property-content{
+    padding:22px;
+}
+
+.badge{
+    display:inline-block;
+    background:var(--dorado);
+    color:white;
+    padding:5px 11px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.property-content h3{
+    color:var(--azul);
+    font-size:21px;
+    margin-bottom:7px;
+}
+
+.location{
+    color:#666;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.price{
+    font-size:25px;
+    font-weight:bold;
+    color:var(--dorado);
+    margin:12px 0;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
+    font-size:14px;
+    margin:15px 0;
+}
+
+.features div{
+    background:#f5f5f5;
+    padding:7px;
+    border-radius:5px;
+}
+
+.property-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.property-buttons a{
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+    padding:10px;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.details{
+    background:var(--azul);
+    color:white;
+}
+
+.whatsapp{
+    background:#159447;
+    color:white;
+}
+
+/* ================= CONTACTO ================= */
+
+.contact{
+    background:var(--azul);
+    color:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact h2{
+    color:white;
+}
+
+.contact h3{
+    color:var(--dorado2);
+    margin-bottom:15px;
+}
+
+.contact-info{
+    font-size:17px;
+}
+
+.contact-info p{
+    margin:12px 0;
+}
+
+.contact-box{
+    background:rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:12px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#041223;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer strong{
+    color:var(--dorado2);
+}
+
+/* ================= WHATSAPP FLOTANTE ================= */
+
+.whatsapp-float{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:60px;
+    height:60px;
+    background:#159447;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 5px 18px rgba(0,0,0,.3);
+    z-index:2000;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+    .property-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:750px){
+
+    .navbar{
         flex-direction:column;
-        gap:12px;
+        gap:10px;
+        padding:12px;
     }
 
     nav{
+        gap:13px;
         flex-wrap:wrap;
         justify-content:center;
-        gap:12px;
-    }
-
-    nav a{
         font-size:14px;
     }
 
     .hero{
-        min-height:570px;
+        min-height:520px;
     }
 
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    section{
-        padding:55px 5%;
-    }
-
-}
-
-@media(max-width:500px){
-
-    .logo{
-        width:125px;
-    }
-
-    .hero h1{
-        font-size:31px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .section-title h2{
-        font-size:29px;
-    }
-
-    .properties{
+    .about-grid,
+    .contact-grid{
         grid-template-columns:1fr;
     }
 
-}
+    .property-grid{
+        grid-template-columns:1fr;
+    }
 
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:55px 15px;
+    }
+}
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
-    <a href="#inicio">
-        <img
-            src="logo.jpg"
-            alt="Inmobiliaria Linda Vista"
-            class="logo"
-        >
-    </a>
+<div class="navbar">
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#propiedades">Propiedades</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+<a href="#inicio">
+<img src="logo.jpg" class="logo" alt="Inmobiliaria Linda Vista">
+</a>
+
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#servicios">Servicios</a>
+<a href="#propiedades">Propiedades</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+</div>
 
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- ================= INICIO ================= -->
 
 <section class="hero" id="inicio">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>
-            Encuentra el lugar para
-            <span>construir tu futuro</span>
-        </h1>
+<h1>
+INMOBILIARIA <span>LINDA VISTA</span>
+</h1>
 
-        <p>
-            Compra, venta y asesoría inmobiliaria con el respaldo
-            de profesionales en arquitectura, ingeniería y servicios legales.
-        </p>
+<p>
+Encuentra el terreno, casa o espacio ideal para construir tu próximo proyecto.
+</p>
 
-        <a href="#propiedades" class="btn btn-gold">
-            Ver propiedades
-        </a>
+<a href="#propiedades" class="btn">
+VER PROPIEDADES
+</a>
 
-        <a href="#contacto" class="btn btn-outline">
-            Contáctanos
-        </a>
+<a href="#contacto" class="btn btn-outline">
+CONTÁCTANOS
+</a>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     PROPIEDADES
-========================= -->
-
-<section id="propiedades">
-
-    <div class="section-title">
-
-        <h2>Propiedades en Venta</h2>
-
-        <div class="section-line"></div>
-
-        <p>
-            Conoce nuestras propiedades disponibles.
-            Encuentra el terreno, casa o espacio ideal para tu próximo proyecto.
-        </p>
-
-    </div>
-
-
-    <div class="properties">
-
-
-        <!-- 1. ABEL SANCHEZ -->
-
-        <div class="card">
-
-            <img
-                src="CALLE%20ABEL%20SANCHES.png"
-                alt="Terreno en Calle Abel Sánchez"
-                class="card-image"
-            >
-
-            <div class="card-content">
-
-                <span class="badge">TERRENO EN VENTA</span>
-
-                <h3>Calle Abel Sánchez Flores</h3>
-
-                <p class="location">
-                    Ixtacuixtla de Mariano Matamoros, Tlaxcala
-                </p>
-
-                <div class="price">
-                    $270,000 MXN
-                </div>
-
-                <div class="details">
-
-                    <p>📐 <strong>Superficie:</strong> 100 m²</p>
-
-                    <p>📏 <strong>Medidas:</strong> 10 × 10 m</p>
-
-                    <p>🚗 <strong>Privada:</strong> 4 m</p>
-
-                    <p>💧 Agua · ⚡ Luz · 🚰 Drenaje</p>
-
-                    <p>📄 Libre de gravamen: Sí</p>
-
-                    <p>🏛️ Servicios de Alcaldía</p>
-
-                </div>
-
-                <a
-                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20el%20terreno%20de%20Calle%20Abel%20S%C3%A1nchez"
-                    target="_blank"
-                    class="whatsapp-btn"
-                >
-                    💬 Solicitar información por WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 2. CALLE 37 -->
-
-        <div class="card">
-
-            <img
-                src="calle%2037%20lomA%20DE%20XICOTENCALT.png"
-                alt="Terreno Calle 37 La Loma Xicohténcatl"
-                class="card-image"
-            >
-
-            <div class="card-content">
-
-                <span class="badge">TERRENO EN VENTA</span>
-
-                <h3>Calle 37 — La Loma Xicohténcatl</h3>
-
-                <p class="location">
-                    Tlaxcala de Xicohténcatl, Tlaxcala
-                </p>
-
-                <p>
-                    Frente a TET.
-                </p>
-
-                <div class="price">
-                    $1,250,000 MXN
-                </div>
-
-                <div class="details">
-
-                    <p>📐 <strong>Superficie:</strong> 386.24 m²</p>
-
-                    <p>📏 <strong>Frente:</strong> 13.60 m</p>
-
-                    <p>📏 <strong>Fondo:</strong> 28.40 m</p>
-
-                </div>
-
-                <a
-                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20el%20terreno%20de%20Calle%2037%20La%20Loma%20Xicoht%C3%A9ncatl"
-                    target="_blank"
-                    class="whatsapp-btn"
-                >
-                    💬 Solicitar información por WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 3. SAN RAFAEL -->
-
-        <div class="card">
-
-            <img
-                src="Carretera%20a%20San%20Rafael.png"
-                alt="Predio rumbo a San Rafael"
-                class="card-image"
-            >
-
-            <div class="card-content">
-
-                <span class="badge">PREDIO EN VENTA</span>
-
-                <h3>Carretera a San Rafael</h3>
-
-                <p class="location">
-                    Cerca de CECYTE
-                </p>
-
-                <div class="price">
-                    $330,000 MXN
-                </div>
-
-                <div class="details">
-
-                    <p>📐 <strong>Superficie:</strong> 300 m²</p>
-
-                    <p>📏 <strong>Medidas:</strong> 15 × 20 m</p>
-
-                    <p>💧 Agua · ⚡ Luz · 🚰 Drenaje</p>
-
-                </div>
-
-                <a
-                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20el%20predio%20rumbo%20a%20San%20Rafael"
-                    target="_blank"
-                    class="whatsapp-btn"
-                >
-                    💬 Solicitar información por WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 4. SAN BALTAZAR - 24 LOTES -->
-
-        <div class="card">
-
-            <img
-                src="cerca%20de%20san%20baltazar%20.png"
-                alt="Lotes cerca de San Baltazar Temaxcalac"
-                class="card-image"
-            >
-
-            <div class="card-content">
-
-                <span class="badge">LOTES EN VENTA</span>
-
-                <h3>San Baltazar Temaxcalac</h3>
-
-                <p class="location">
-                    Lotes disponibles
-                </p>
-
-                <div class="price">
-                    Desde $109,000 MXN
-                </div>
-
-                <div class="details">
-
-                    <p>
-                        📐 <strong>Superficie total:</strong>
-                        3,362.024 m²
-                    </p>
-
-                    <p>
-                        📏 <strong>Medida de referencia:</strong>
-                        11.36 × 8.00 m
-                    </p>
-
-                    <p>
-                        🌳 Tipo de terreno: Rústico
-                    </p>
-
-                    <p>
-                        ⚡ Servicio disponible: Luz
-                    </p>
-
-                </div>
-
-
-                <div class="lotes-list">
-
-                    <div class="lote-row">
-                        <strong>Lote 1</strong>
-                        <span>$145,000</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lotes 2–6</strong>
-                        <span>$136,000 c/u</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lotes 7–12</strong>
-                        <span>$131,500 c/u</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lotes 13–18</strong>
-                        <span>$122,500 c/u</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lotes 19–23</strong>
-                        <span>$109,000 c/u</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lote 24</strong>
-                        <span>$200,000</span>
-                    </div>
-
-                </div>
-
-
-                <a
-                    href="https://wa.me/522482689365?text=Hola,%20me%20interesan%20los%20lotes%20de%20San%20Baltazar%20Temaxcalac"
-                    target="_blank"
-                    class="whatsapp-btn"
-                >
-                    💬 Consultar lotes disponibles
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 5. CAMINO REAL -->
-
-        <div class="card">
-
-            <img
-                src="camino%20real%20a%20san%20carlos.png"
-                alt="Casa Camino Real a San Carlos"
-                class="card-image"
-            >
-
-            <div class="card-content">
-
-                <span class="badge">CASA EN VENTA</span>
-
-                <h3>Camino Real a San Carlos</h3>
-
-                <p class="location">
-                    Tepetitla de Lardizabal, Tlaxcala
-                </p>
-
-                <div class="price">
-                    $3,500,000 MXN
-                </div>
-
-                <div class="details">
-
-                    <p>🏠 Casa en venta</p>
-
-                    <p>💧 Agua · ⚡ Luz · 🚰 Drenaje</p>
-
-                    <p>📐 Superficie del terreno: pendiente de confirmar</p>
-
-                    <p>📏 Medidas: pendientes de confirmar</p>
-
-                </div>
-
-                <a
-                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20la%20casa%20de%20Camino%20Real%20a%20San%20Carlos"
-                    target="_blank"
-                    class="whatsapp-btn"
-                >
-                    💬 Solicitar información por WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 6. AMAXAC -->
-
-        <div class="card">
-
-            <div class="placeholder">
-                📷<br>
-                Fotografía de esta propiedad próximamente
-            </div>
-
-            <div class="card-content">
-
-                <span class="badge">TERRENO EN VENTA</span>
-
-                <h3>Amaxac de Guerrero</h3>
-
-                <p class="location">
-                    Amaxac de Guerrero, Tlaxcala
-                </p>
-
-                <div class="price">
-                    $1,350,000 MXN
-                </div>
-
-                <div class="details">
-
-                    <p>📐 <strong>Superficie:</strong> 962 m²</p>
-
-                    <p>📏 <strong>Frente:</strong> 13.00 m</p>
-
-                    <p>📏 <strong>Fondo:</strong> 74 m</p>
-
-                    <p>📐 <strong>Tipo:</strong> Regular</p>
-
-                    <p>💧 Agua · 🚰 Drenaje · ⚡ Luz</p>
-
-                    <p>📄 Libre de gravamen: Sí</p>
-
-                    <p>📍 Cerca del CONALEP 056</p>
-
-                </div>
-
-                <a
-                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20el%20terreno%20en%20Amaxac%20de%20Guerrero"
-                    target="_blank"
-                    class="whatsapp-btn"
-                >
-                    💬 Solicitar información por WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 7. TERRENO 3 BESANAS -->
-
-        <div class="card">
-
-            <div class="placeholder">
-                📷<br>
-                Fotografía de esta propiedad próximamente
-            </div>
-
-            <div class="card-content">
-
-                <span class="badge">LOTES EN VENTA</span>
-
-                <h3>Terreno 3 Besanas</h3>
-
-                <p class="location">
-                    Tepetitla de Lardizabal, Tlaxcala
-                </p>
-
-                <div class="price">
-                    Precio por confirmar
-                </div>
-
-                <div class="details">
-
-                    <p>
-                        📐 <strong>Superficie:</strong>
-                        21,794.6781 m²
-                    </p>
-
-                    <p>
-                        📏 <strong>Norte:</strong>
-                        488.37 m
-                    </p>
-
-                    <p>
-                        📏 <strong>Sur:</strong>
-                        480.39 m
-                    </p>
-
-                    <p>
-                        📏 <strong>Poniente:</strong>
-                        45.28 m
-                    </p>
-
-                    <p>
-                        📏 <strong>Oriente:</strong>
-                        44.71 m
-                    </p>
-
-                    <p>
-                        💡 Servicio reportado: Luz
-                    </p>
-
-                </div>
-
-                <a
-                    href="https://wa.me/522482689365?text=Hola,%20me%20interesan%20los%20lotes%20del%20Terreno%203%20Besanas"
-                    target="_blank"
-                    class="whatsapp-btn"
-                >
-                    💬 Solicitar información por WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 8. PRIVADA LOS PINOS -->
-
-        <div class="card">
-
-            <div class="placeholder">
-                📷<br>
-                Fotografía de esta propiedad próximamente
-            </div>
-
-            <div class="card-content">
-
-                <span class="badge">CASA EN VENTA</span>
-
-                <h3>Privada Los Pinos 1-B</h3>
-
-                <p class="location">
-                    Villa Alta
-                </p>
-
-                <div class="price">
-                    $2,300,000 MXN
-                </div>
-
-                <div class="details">
-
-                    <p>
-                        📐 <strong>Terreno adicional:</strong>
-                        208 m²
-                    </p>
-
-                    <p>
-                        🏗️ <strong>Construcción:</strong>
-                        152 m²
-                    </p>
-
-                    <p>
-                        🚗 Estacionamiento para hasta 8 autos
-                    </p>
-
-                    <p>
-                        🛏️ <strong>Recámaras:</strong> 3
-                    </p>
-
-                    <p>
-                        🛁 <strong>Baños completos:</strong> 2
-                    </p>
-
-                    <p>
-                        🛋️ 3 salas · 🍽️ comedor · 🍳 cocina
-                    </p>
-
-                    <p>
-                        🧹 Cuarto de servicio
-                    </p>
-
-                    <p>
-                        🏗️ Tercer piso en obra gris
-                    </p>
-
-                    <p>
-                        💧 Agua · ⚡ Luz · 🚰 Drenaje
-                    </p>
-
-                </div>
-
-                <a
-                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20la%20casa%20de%20Privada%20Los%20Pinos%201-B"
-                    target="_blank"
-                    class="whatsapp-btn"
-                >
-                    💬 Solicitar información por WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 9. EMILIANO CARRANZA -->
-
-        <div class="card">
-
-            <div class="placeholder">
-                📷<br>
-                Fotografía de esta propiedad próximamente
-            </div>
-
-            <div class="card-content">
-
-                <span class="badge">CASA EN VENTA</span>
-
-                <h3>Calle Emiliano Carranza</h3>
-
-                <p class="location">
-                    Tepetitla de Lardizabal, Tlaxcala
-                </p>
-
-                <div class="price">
-                    $1,250,000 MXN
-                </div>
-
-                <div class="details">
-
-                    <p>
-                        📐 <strong>Terreno:</strong>
-                        99.880 m²
-                    </p>
-
-                    <p>
-                        📏 <strong>Norte:</strong> 9.31 m
-                    </p>
-
-                    <p>
-                        📏 <strong>Sur:</strong> 11.84 m
-                    </p>
-
-                    <p>
-                        📏 <strong>Oriente:</strong> 9.89 m
-                    </p>
-
-                    <p>
-                        📏 <strong>Poniente:</strong> 9.00 m
-                    </p>
-
-                    <p>
-                        🛏️ 4 recámaras
-                    </p>
-
-                    <p>
-                        🛁 2 baños completos
-                    </p>
-
-                    <p>
-                        🌤️ Terraza en segunda planta
-                    </p>
-
-                    <p>
-                        🏦 <strong>Acepta crédito INFONAVIT</strong>
-                    </p>
-
-                    <p>
-                        💧 Agua · ⚡ Luz · 🚰 Drenaje
-                    </p>
-
-                </div>
-
-                <a
-                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20la%20casa%20de%20Calle%20Emiliano%20Carranza"
-                    target="_blank"
-                    class="whatsapp-btn"
-                >
-                    💬 Solicitar información por WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- 10. ABRAHAM CASTELLANOS -->
-
-        <div class="card">
-
-            <div class="placeholder">
-                📷<br>
-                Fotografía de la lotificación próximamente
-            </div>
-
-            <div class="card-content">
-
-                <span class="badge">LOTES EN VENTA</span>
-
-                <h3>Cerca de Primaria Abraham Castellanos</h3>
-
-                <p class="location">
-                    Tepetitla de Lardizabal, Tlaxcala
-                </p>
-
-                <div class="price">
-                    Desde $107,780 MXN
-                </div>
-
-                <div class="details">
-
-                    <p>
-                        📐 <strong>Superficie total:</strong>
-                        1,973.3045 m²
-                    </p>
-
-                    <p>
-                        📏 <strong>Norte:</strong> 40.22 m
-                    </p>
-
-                    <p>
-                        📏 <strong>Sur:</strong> 15.80 m
-                    </p>
-
-                    <p>
-                        📏 <strong>Oriente:</strong> 85.00 m
-                    </p>
-
-                    <p>
-                        📏 <strong>Poniente:</strong> 55.90 m
-                    </p>
-
-                    <p>
-                        💧 Agua · ⚡ Luz · 🚰 Drenaje
-                    </p>
-
-                </div>
-
-
-                <div class="lotes-list">
-
-                    <div class="lote-row">
-                        <strong>Lote 1</strong>
-                        <span>VENDIDO</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lote 2</strong>
-                        <span>VENDIDO</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lote 3</strong>
-                        <span>$111,240</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lote 4</strong>
-                        <span>$122,950</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lote 5</strong>
-                        <span>$135,630</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lote 6</strong>
-                        <span>$149,270</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lote 7</strong>
-                        <span>$130,280</span>
-                    </div>
-
-                    <div class="lote-row">
-                        <strong>Lote 8</strong>
-                        <span>$107,780</span>
-                    </div>
-
-                </div>
-
-
-                <a
-                    href="https://wa.me/522482689365?text=Hola,%20me%20interesan%20los%20lotes%20cerca%20de%20la%20Primaria%20Abraham%20Castellanos"
-                    target="_blank"
-                    class="whatsapp-btn"
-                >
-                    💬 Consultar lotes disponibles
-                </a>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     SERVICIOS
-========================= -->
-
-<section class="services" id="servicios">
-
-    <div class="section-title">
-
-        <h2>Nuestros Servicios</h2>
-
-        <div class="section-line"></div>
-
-        <p>
-            Soluciones integrales para tus proyectos inmobiliarios,
-            de construcción y desarrollo.
-        </p>
-
-    </div>
-
-
-    <div class="service-grid">
-
-
-        <div class="service-box">
-
-            <h3>🏠 Inmobiliaria</h3>
-
-            <ul>
-
-                <li>Compra y venta de terrenos</li>
-
-                <li>Compra y venta de casas</li>
-
-                <li>Comercialización de propiedades</li>
-
-                <li>Asesoría inmobiliaria</li>
-
-                <li>Apoyo a propietarios para vender</li>
-
-                <li>Opciones de crédito</li>
-
-                <li>Apoyo para construir tu hogar en tu terreno</li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="service-box">
-
-            <h3>📐 Arquitectura</h3>
-
-            <ul>
-
-                <li>Diseño de vivienda</li>
-
-                <li>Planos estructurales</li>
-
-                <li>Planos de cimentación</li>
-
-                <li>Instalaciones hidráulicas</li>
-
-                <li>Instalaciones sanitarias</li>
-
-                <li>Instalaciones eléctricas</li>
-
-                <li>Instalaciones de gas LP</li>
-
-                <li>Renders</li>
-
-                <li>Permisos</li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="service-box">
-
-            <h3>🏗️ Ingeniería</h3>
-
-            <ul>
-
-                <li>Topografía GNSS / GPS</li>
-
-                <li>Brigada topográfica</li>
-
-                <li>Construcción</li>
-
-                <li>Infraestructura industrial</li>
-
-                <li>Instalaciones</li>
-
-                <li>Impermeabilización</li>
-
-                <li>Pintura</li>
-
-            </ul>
-
-        </div>
-
-
-        <div class="service-box">
-
-            <h3>⚖️ Servicios Legales</h3>
-
-            <ul>
-
-                <li>Asesoría inmobiliaria</li>
-
-                <li>Contratos</li>
-
-                <li>Regularización de propiedades</li>
-
-                <li>Trámites ante Registro Público</li>
-
-                <li>Gestión de escrituras</li>
-
-                <li>Trámites Infonavit</li>
-
-                <li>Trámites FOVISSSTE</li>
-
-            </ul>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     NOSOTROS
-========================= -->
+<!-- ================= NOSOTROS ================= -->
 
 <section class="about" id="nosotros">
 
-    <div class="section-title">
+<div class="container">
 
-        <h2>Sobre Nosotros</h2>
+<div class="section-title">
+<h2>¿Quiénes somos?</h2>
+<div class="line"></div>
+</div>
 
-        <div class="section-line"></div>
+<div class="about-grid">
 
-    </div>
+<div>
 
+<h3>Inmobiliaria Linda Vista</h3>
 
-    <div class="about-content">
+<p>
+Somos una empresa dedicada a brindar soluciones profesionales en
+<strong>inmobiliaria, arquitectura, ingeniería y servicios legales.</strong>
+</p>
 
-        <h3>INMOBILIARIA LINDA VISTA</h3>
+<p>
+Te acompañamos durante el proceso de compra, venta, construcción y
+regularización de tu propiedad, buscando ofrecer atención profesional,
+confianza y seguridad.
+</p>
 
-        <p>
-            Somos una empresa dedicada a brindar soluciones integrales
-            en materia inmobiliaria, arquitectura, ingeniería y servicios legales.
-        </p>
+<p>
+También ayudamos a propietarios a comercializar sus
+<strong>terrenos, lotes y casas</strong>, buscando las mejores alternativas
+para concretar sus operaciones.
+</p>
 
-        <p>
-            Te acompañamos durante cada etapa de tu proyecto:
-            desde la búsqueda y adquisición de una propiedad,
-            hasta el diseño, construcción y regularización.
-        </p>
+<p>
+<strong>Construye tu hogar en tu terreno.</strong>
+Nosotros podemos ayudarte a hacerlo realidad de manera profesional.
+</p>
 
-        <p>
-            Nuestro compromiso es ofrecer atención profesional,
-            confianza y seguridad para ayudarte a tomar las mejores decisiones.
-        </p>
+</div>
 
-        <p>
-            <strong>
-                Construye tu hogar. Desarrolla tu proyecto.
-                Hazlo con el respaldo de profesionales.
-            </strong>
-        </p>
+<div class="about-box">
 
-    </div>
+<h3>¿Qué encontrarás con nosotros?</h3>
+
+<ul>
+
+<li>✓ Terrenos y lotes en venta</li>
+<li>✓ Casas en venta</li>
+<li>✓ Locales y espacios comerciales</li>
+<li>✓ Apoyo en compra y venta de propiedades</li>
+<li>✓ Arquitectura e ingeniería</li>
+<li>✓ Topografía</li>
+<li>✓ Asesoría legal inmobiliaria</li>
+<li>✓ Regularización de propiedades</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     CONTACTO
-========================= -->
+<!-- ================= SERVICIOS ================= -->
+
+<section class="services" id="servicios">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Nuestros Servicios</h2>
+
+<div class="line"></div>
+
+<p>
+Soluciones integrales para tu proyecto inmobiliario.
+</p>
+
+</div>
+
+
+<div class="services-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">🏠</div>
+
+<h3>Inmobiliaria</h3>
+
+<ul>
+<li>Compra y venta</li>
+<li>Terrenos y lotes</li>
+<li>Casas</li>
+<li>Comercialización de propiedades</li>
+<li>Asesoría inmobiliaria</li>
+</ul>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">📐</div>
+
+<h3>Arquitectura</h3>
+
+<ul>
+<li>Diseño de vivienda</li>
+<li>Planos estructurales</li>
+<li>Instalaciones</li>
+<li>Renders</li>
+<li>Permisos</li>
+</ul>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">📏</div>
+
+<h3>Ingeniería</h3>
+
+<ul>
+<li>Topografía GNSS/GPS</li>
+<li>Brigada topográfica</li>
+<li>Construcción</li>
+<li>Infraestructura</li>
+<li>Impermeabilización y pintura</li>
+</ul>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">⚖️</div>
+
+<h3>Servicios Legales</h3>
+
+<ul>
+<li>Contratos</li>
+<li>Regularización</li>
+<li>Registro Público</li>
+<li>Escrituración</li>
+<li>INFONAVIT / FOVISSSTE</li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROPIEDADES ================= -->
+
+<section class="properties" id="propiedades">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Propiedades disponibles</h2>
+
+<div class="line"></div>
+
+<p>
+Conoce algunas de nuestras propiedades disponibles.
+</p>
+
+</div>
+
+
+<div class="filters">
+
+<button class="filter-btn active" onclick="filterProperties('todos',this)">
+TODAS
+</button>
+
+<button class="filter-btn" onclick="filterProperties('terreno',this)">
+TERRENOS
+</button>
+
+<button class="filter-btn" onclick="filterProperties('lote',this)">
+LOTES
+</button>
+
+<button class="filter-btn" onclick="filterProperties('casa',this)">
+CASAS
+</button>
+
+<button class="filter-btn" onclick="filterProperties('local',this)">
+LOCALES
+</button>
+
+</div>
+
+
+<div class="property-grid" id="propertyGrid">
+
+
+<!-- 1 -->
+
+<div class="property-card" data-type="terreno">
+
+<img src="CALLE%20ABEL%20SANCHES.png"
+class="property-image"
+alt="Terreno Calle Abel Sánchez Flores">
+
+<div class="property-content">
+
+<span class="badge">TERRENO</span>
+
+<h3>Terreno en Venta</h3>
+
+<div class="location">
+📍 Calle Abel Sánchez Flores, Ixtacuixtla de Mariano Matamoros, Tlaxcala
+</div>
+
+<div class="price">$270,000 MXN</div>
+
+<div class="features">
+<div>📐 100 m²</div>
+<div>📏 10 × 10 m</div>
+<div>🚪 Privada 4 m</div>
+<div>✓ Libre de gravamen</div>
+</div>
+
+<p>
+Agua, drenaje, luz y servicios de alcaldía.
+</p>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20terreno%20de%20Calle%20Abel%20Sánchez%20Flores"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 2 -->
+
+<div class="property-card" data-type="terreno">
+
+<img src="calle%2037%20lomA%20DE%20XICOTENCALT.png"
+class="property-image"
+alt="Terreno Calle 37 La Loma Xicohténcatl">
+
+<div class="property-content">
+
+<span class="badge">TERRENO</span>
+
+<h3>Terreno en Venta</h3>
+
+<div class="location">
+📍 Calle 37, La Loma Xicohténcatl, Tlaxcala
+</div>
+
+<div class="price">$1,250,000 MXN</div>
+
+<div class="features">
+<div>📐 386.24 m²</div>
+<div>📏 13.60 × 28.40 m</div>
+<div>🏫 Frente a TET</div>
+</div>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20terreno%20de%20Calle%2037"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 3 -->
+
+<div class="property-card" data-type="terreno">
+
+<img src="Carretera%20a%20San%20Rafael.png"
+class="property-image"
+alt="Predio rumbo a San Rafael">
+
+<div class="property-content">
+
+<span class="badge">PREDIO</span>
+
+<h3>Predio en Venta</h3>
+
+<div class="location">
+📍 Carretera rumbo a San Rafael, cerca de CECYTE
+</div>
+
+<div class="price">$330,000 MXN</div>
+
+<div class="features">
+<div>📐 300 m²</div>
+<div>📏 15 × 20 m</div>
+<div>💡 Luz</div>
+<div>💧 Agua</div>
+</div>
+
+<p>
+Cuenta también con drenaje.
+</p>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20predio%20rumbo%20a%20San%20Rafael"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 4 -->
+
+<div class="property-card" data-type="lote">
+
+<img src="cerca%20de%20san%20baltazar%20.png"
+class="property-image"
+alt="Lotes cerca de San Baltazar Temaxcalac">
+
+<div class="property-content">
+
+<span class="badge">LOTES</span>
+
+<h3>Lotes en Venta</h3>
+
+<div class="location">
+📍 Cerca de San Baltazar Temaxcalac
+</div>
+
+<div class="price">
+Desde $109,000 MXN
+</div>
+
+<div class="features">
+<div>📐 90.88 m² referencia</div>
+<div>🌳 Predio rústico</div>
+<div>💡 Luz</div>
+<div>🏷️ 24 lotes</div>
+</div>
+
+<p>
+Precios desde $109,000 hasta $200,000 MXN según lote.
+</p>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesan%20los%20lotes%20cerca%20de%20San%20Baltazar"
+target="_blank">
+Consultar
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 5 -->
+
+<div class="property-card" data-type="casa">
+
+<img src="camino%20real%20a%20san%20carlos.png"
+class="property-image"
+alt="Casa Camino Real a San Carlos">
+
+<div class="property-content">
+
+<span class="badge">CASA</span>
+
+<h3>Casa en Venta</h3>
+
+<div class="location">
+📍 Calle Camino Real a San Carlos, Tepetitla de Lardizabal
+</div>
+
+<div class="price">$3,500,000 MXN</div>
+
+<div class="features">
+<div>🏠 Casa</div>
+<div>💧 Agua</div>
+<div>💡 Luz</div>
+<div>🚰 Drenaje</div>
+</div>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20la%20casa%20de%20Camino%20Real%20a%20San%20Carlos"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 6 -->
+
+<div class="property-card" data-type="terreno">
+
+<img src="Amaxac%20de%20Guerrero.png"
+class="property-image"
+alt="Terreno Amaxac de Guerrero">
+
+<div class="property-content">
+
+<span class="badge">TERRENO</span>
+
+<h3>Terreno en Venta</h3>
+
+<div class="location">
+📍 Amaxac de Guerrero, Tlaxcala
+</div>
+
+<div class="price">$1,350,000 MXN</div>
+
+<div class="features">
+<div>📐 962 m²</div>
+<div>📏 Frente 13 m</div>
+<div>✓ Libre de gravamen</div>
+<div>🏫 Cerca de CONALEP 056</div>
+</div>
+
+<p>
+Cuenta con agua, drenaje y electricidad.
+</p>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20terreno%20en%20Amaxac%20de%20Guerrero"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 7 -->
+
+<div class="property-card" data-type="lote">
+
+<img src="terreno%203%20besanas.png"
+class="property-image"
+alt="Terreno 3 Besanas Tepetitla">
+
+<div class="property-content">
+
+<span class="badge">LOTES</span>
+
+<h3>Terreno 3 Besanas</h3>
+
+<div class="location">
+📍 Tepetitla de Lardizabal, Tlaxcala
+</div>
+
+<div class="price">Consultar</div>
+
+<div class="features">
+<div>📐 21,794.6781 m²</div>
+<div>📏 Norte 488.37 m</div>
+<div>📏 Sur 480.39 m</div>
+<div>📏 Oriente 44.71 m</div>
+</div>
+
+<p>
+Poniente: 45.28 m. Precio y condiciones a consultar.
+</p>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20terreno%203%20Besanas"
+target="_blank">
+Consultar
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 8 -->
+
+<div class="property-card" data-type="casa">
+
+<img src="Privada%20Los%20Pinos%201-B.png"
+class="property-image"
+alt="Casa Privada Los Pinos 1-B">
+
+<div class="property-content">
+
+<span class="badge">CASA</span>
+
+<h3>Casa en Venta</h3>
+
+<div class="location">
+📍 Privada Los Pinos 1-B, Villa Alta
+</div>
+
+<div class="price">$2,300,000 MXN</div>
+
+<div class="features">
+<div>📐 Terreno 208 m²</div>
+<div>🏗️ Construcción 152 m²</div>
+<div>🛏️ 3 recámaras</div>
+<div>🚿 2 baños</div>
+</div>
+
+<p>
+Tres niveles, terraza y espacio adicional para estacionamiento de hasta 8 vehículos. Tercer nivel en obra gris.
+</p>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20la%20casa%20de%20Privada%20Los%20Pinos"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 9 -->
+
+<div class="property-card" data-type="casa">
+
+<img src="Calle%20Emiliano%20Carranza.png"
+class="property-image"
+alt="Casa Calle Emiliano Carranza">
+
+<div class="property-content">
+
+<span class="badge">CASA</span>
+
+<h3>Casa en Venta</h3>
+
+<div class="location">
+📍 Calle Emiliano Carranza, Tepetitla de Lardizabal
+</div>
+
+<div class="price">$1,250,000 MXN</div>
+
+<div class="features">
+<div>📐 99.88 m²</div>
+<div>🛏️ 4 recámaras</div>
+<div>🚿 2 baños</div>
+<div>🏦 INFONAVIT</div>
+</div>
+
+<p>
+Cuenta con terraza y servicios de agua, electricidad y drenaje.
+</p>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20la%20casa%20de%20Calle%20Emiliano%20Carranza"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 10 -->
+
+<div class="property-card" data-type="lote">
+
+<img src="Cerca%20de%20Primaria%20Abraham%20Castellanos.png"
+class="property-image"
+alt="Lotes cerca de Primaria Abraham Castellanos">
+
+<div class="property-content">
+
+<span class="badge">LOTES</span>
+
+<h3>Lotes en Venta</h3>
+
+<div class="location">
+📍 Cerca de Primaria Abraham Castellanos, Tepetitla
+</div>
+
+<div class="price">
+Desde $107,780 MXN
+</div>
+
+<div class="features">
+<div>🏷️ Lotes 3 al 8</div>
+<div>💧 Agua</div>
+<div>💡 Luz</div>
+<div>🚰 Drenaje</div>
+</div>
+
+<p>
+Lotes 1 y 2 vendidos. Disponibles actualmente los lotes 3, 4, 5, 6, 7 y 8.
+</p>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesan%20los%20lotes%20cerca%20de%20la%20Primaria%20Abraham%20Castellanos"
+target="_blank">
+Consultar
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 11 -->
+
+<div class="property-card" data-type="local">
+
+<img src="Local%20en%20Venta%20de%20Autopista%20San%20Martín%E2%80%93Tlaxcala.png"
+class="property-image"
+alt="Local en Venta Autopista San Martín Tlaxcala">
+
+<div class="property-content">
+
+<span class="badge">LOCAL</span>
+
+<h3>Local en Venta</h3>
+
+<div class="location">
+📍 Autopista San Martín–Tlaxcala 5, San Gabriel Popocatla, Tlaxcala
+</div>
+
+<div class="price">$2,400,000 MXN</div>
+
+<div class="features">
+<div>📐 Terreno 120 m²</div>
+<div>🏗️ Construcción 299 m²</div>
+<div>🛏️ 2 recámaras</div>
+<div>🚿 1 baño + 2 medios</div>
+<div>🚗 1 estacionamiento</div>
+<div>🏢 2 niveles</div>
+</div>
+
+<p>
+Construcción 2020. Libre de gravamen.
+Ideal para restaurante, cafetería, comercio, oficina o negocio con vivienda.
+</p>
+
+<div class="property-buttons">
+
+<a class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20local%20de%20la%20Autopista%20San%20Martín–Tlaxcala"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACTO ================= -->
 
 <section class="contact" id="contacto">
 
-    <div class="section-title">
+<div class="container">
 
-        <h2>Contáctanos</h2>
+<div class="section-title">
 
-        <div class="section-line"></div>
+<h2>Contáctanos</h2>
 
-    </div>
+<div class="line"></div>
 
-
-    <div class="contact-grid">
-
-
-        <!-- WHATSAPP 1 -->
-
-        <div class="contact-box">
-
-            <h3>📱 WhatsApp</h3>
-
-            <p class="phone">
-                248 268 9365
-            </p>
-
-            <a
-                href="https://wa.me/522482689365"
-                target="_blank"
-                class="contact-whatsapp"
-            >
-                Abrir WhatsApp
-            </a>
-
-        </div>
+</div>
 
 
-        <!-- WHATSAPP 2 -->
-
-        <div class="contact-box">
-
-            <h3>📱 WhatsApp</h3>
-
-            <p class="phone">
-                248 163 1975
-            </p>
-
-            <a
-                href="https://wa.me/522481631975"
-                target="_blank"
-                class="contact-whatsapp"
-            >
-                Abrir WhatsApp
-            </a>
-
-        </div>
+<div class="contact-grid">
 
 
-        <!-- CORREO -->
+<div>
 
-        <div class="contact-box">
+<h3>INMOBILIARIA LINDA VISTA</h3>
 
-            <h3>✉️ Correo electrónico</h3>
+<div class="contact-info">
 
-            <p>
-                <a
-                    href="mailto:inmlindavista@gmail.com"
-                    style="color:#071a33;font-weight:bold;"
-                >
-                    inmlindavista@gmail.com
-                </a>
-            </p>
+<p>
+📍 <strong>Dirección:</strong><br>
+PROLONGACION COLOSIO #1<br>
+TEPETITLA DE LARDIZABAL, TLAXCALA
+</p>
 
-        </div>
+<p>
+📞 <strong>248 268 9365</strong>
+</p>
 
+<p>
+📞 <strong>248 163 1975</strong>
+</p>
 
-        <!-- OFICINA -->
+<p>
+✉️ <strong>inmlindavista@gmail.com</strong>
+</p>
 
-        <div class="contact-box">
+<p>
+🕘 <strong>Horario:</strong><br>
+Martes a viernes: 9:00 a.m. – 6:00 p.m.<br>
+Sábado y domingo: 9:00 a.m. – 2:00 p.m.
+</p>
 
-            <h3>📍 Oficina</h3>
+</div>
 
-            <p>
-                <strong>
-                    PROLONGACION COLOSIO #1
-                </strong>
-            </p>
-
-            <p>
-                TEPETITLA DE LARDIZABAL,
-                TLAXCALA
-            </p>
-
-            <p>
-                Pasando Farmacias 24hrs
-            </p>
-
-        </div>
+</div>
 
 
-        <!-- HORARIOS -->
+<div class="contact-box">
 
-        <div class="contact-box">
+<h3>¿Buscas comprar o vender?</h3>
 
-            <h3>🕐 Horarios</h3>
+<p>
+Estamos para ayudarte a encontrar la propiedad adecuada
+o a comercializar tu terreno, lote o casa.
+</p>
 
-            <p>
-                <strong>Martes – Viernes</strong><br>
-                9:00 a.m. – 6:00 p.m.
-            </p>
+<br>
 
-            <p style="margin-top:12px;">
+<a
+class="btn"
+href="https://wa.me/52482689365?text=Hola,%20quiero%20información%20sobre%20una%20propiedad"
+target="_blank">
+WHATSAPP 1
+</a>
 
-                <strong>Sábado – Domingo</strong><br>
+<a
+class="btn"
+href="https://wa.me/52481631975?text=Hola,%20quiero%20información%20sobre%20una%20propiedad"
+target="_blank">
+WHATSAPP 2
+</a>
 
-                9:00 a.m. – 2:00 p.m.
-
-            </p>
-
-        </div>
+</div>
 
 
-    </div>
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <p>
-        © 2026
-        <strong>INMOBILIARIA LINDA VISTA</strong>
-    </p>
+<p>
+<strong>INMOBILIARIA LINDA VISTA</strong>
+</p>
 
-    <p>
-        Bienes Raíces · Arquitectura · Ingeniería · Servicios Legales
-    </p>
+<p>
+Profesionalismo · Confianza · Seguridad
+</p>
 
-    <p>
-        Profesionalismo · Confianza · Seguridad
-    </p>
+<p>
+© 2026 Inmobiliaria Linda Vista. Todos los derechos reservados.
+</p>
 
 </footer>
 
 
-<!-- =========================
-     WHATSAPP FLOTANTE
-========================= -->
+<!-- ================= WHATSAPP FLOTANTE ================= -->
 
 <a
-    href="https://wa.me/522482689365"
-    target="_blank"
-    class="float-whatsapp"
-    title="Contactar por WhatsApp"
->
-    💬
+class="whatsapp-float"
+href="https://wa.me/52482689365?text=Hola,%20quiero%20información%20sobre%20las%20propiedades%20de%20Inmobiliaria%20Linda%20Vista"
+target="_blank"
+title="Contactar por WhatsApp">
+💬
 </a>
 
 
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function filterProperties(type, button){
+
+    const cards = document.querySelectorAll(".property-card");
+    const buttons = document.querySelectorAll(".filter-btn");
+
+    buttons.forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    cards.forEach(card => {
+
+        if(type === "todos" || card.dataset.type === type){
+            card.style.display = "block";
+        }else{
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
 </body>
 </html>
-```

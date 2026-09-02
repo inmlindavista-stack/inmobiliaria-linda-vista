@@ -9,6 +9,7 @@
 <meta name="description" content="Inmobiliaria Linda Vista. Venta de terrenos, lotes, casas y locales en Tlaxcala. Servicios inmobiliarios, arquitectura, ingeniería y asesoría legal.">
 
 <style>
+
 :root{
     --azul:#071b35;
     --azul2:#0d2c4f;
@@ -50,12 +51,13 @@ header{
 
 .navbar{
     max-width:1250px;
-    margin:auto;
     min-height:82px;
+    margin:auto;
+    padding:10px 25px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:10px 25px;
 }
 
 .logo{
@@ -85,6 +87,7 @@ nav a:hover{
 
 .hero{
     min-height:600px;
+
     background:
     linear-gradient(rgba(7,27,53,.65),rgba(7,27,53,.78)),
     url("fachada-inmobiliaria%20pagina.jpg") center/cover no-repeat;
@@ -92,8 +95,10 @@ nav a:hover{
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
     color:white;
+
     padding:80px 20px;
 }
 
@@ -312,16 +317,6 @@ section{
     display:block;
 }
 
-.property-image.placeholder{
-    background:
-    linear-gradient(135deg,#071b35,#173d63);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:45px;
-}
-
 .property-content{
     padding:22px;
 }
@@ -385,11 +380,6 @@ section{
     font-weight:bold;
 }
 
-.details{
-    background:var(--azul);
-    color:white;
-}
-
 .whatsapp{
     background:#159447;
     color:white;
@@ -402,14 +392,14 @@ section{
     color:white;
 }
 
+.contact .section-title h2{
+    color:white;
+}
+
 .contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:40px;
-}
-
-.contact h2{
-    color:white;
 }
 
 .contact h3{
@@ -444,23 +434,30 @@ footer strong{
     color:var(--dorado2);
 }
 
-/* ================= WHATSAPP FLOTANTE ================= */
+/* ================= WHATSAPP ================= */
 
 .whatsapp-float{
     position:fixed;
     right:22px;
     bottom:22px;
+
     width:60px;
     height:60px;
+
     background:#159447;
     color:white;
+
     border-radius:50%;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     font-size:30px;
     text-decoration:none;
+
     box-shadow:0 5px 18px rgba(0,0,0,.3);
+
     z-index:2000;
 }
 
@@ -513,10 +510,12 @@ footer strong{
         padding:55px 15px;
     }
 }
+
 </style>
 </head>
 
 <body>
+
 
 <!-- ================= HEADER ================= -->
 
@@ -525,15 +524,22 @@ footer strong{
 <div class="navbar">
 
 <a href="#inicio">
-<img src="logo.jpg" class="logo" alt="Inmobiliaria Linda Vista">
+
+<img
+src="logo.png"
+class="logo"
+alt="Inmobiliaria Linda Vista">
+
 </a>
 
 <nav>
+
 <a href="#inicio">Inicio</a>
 <a href="#nosotros">Nosotros</a>
 <a href="#servicios">Servicios</a>
 <a href="#propiedades">Propiedades</a>
 <a href="#contacto">Contacto</a>
+
 </nav>
 
 </div>
@@ -575,9 +581,13 @@ CONTÁCTANOS
 <div class="container">
 
 <div class="section-title">
+
 <h2>¿Quiénes somos?</h2>
+
 <div class="line"></div>
+
 </div>
+
 
 <div class="about-grid">
 
@@ -598,16 +608,16 @@ confianza y seguridad.
 
 <p>
 También ayudamos a propietarios a comercializar sus
-<strong>terrenos, lotes y casas</strong>, buscando las mejores alternativas
-para concretar sus operaciones.
+<strong>terrenos, lotes y casas</strong>.
 </p>
 
 <p>
 <strong>Construye tu hogar en tu terreno.</strong>
-Nosotros podemos ayudarte a hacerlo realidad de manera profesional.
+Nosotros podemos ayudarte a hacerlo de manera profesional.
 </p>
 
 </div>
+
 
 <div class="about-box">
 
@@ -618,7 +628,7 @@ Nosotros podemos ayudarte a hacerlo realidad de manera profesional.
 <li>✓ Terrenos y lotes en venta</li>
 <li>✓ Casas en venta</li>
 <li>✓ Locales y espacios comerciales</li>
-<li>✓ Apoyo en compra y venta de propiedades</li>
+<li>✓ Compra y venta de propiedades</li>
 <li>✓ Arquitectura e ingeniería</li>
 <li>✓ Topografía</li>
 <li>✓ Asesoría legal inmobiliaria</li>
@@ -667,7 +677,7 @@ Soluciones integrales para tu proyecto inmobiliario.
 <li>Compra y venta</li>
 <li>Terrenos y lotes</li>
 <li>Casas</li>
-<li>Comercialización de propiedades</li>
+<li>Comercialización</li>
 <li>Asesoría inmobiliaria</li>
 </ul>
 
@@ -745,45 +755,53 @@ Soluciones integrales para tu proyecto inmobiliario.
 <div class="line"></div>
 
 <p>
-Conoce algunas de nuestras propiedades disponibles.
+Conoce nuestras propiedades disponibles.
 </p>
 
 </div>
 
 
+<!-- FILTROS -->
+
 <div class="filters">
 
-<button class="filter-btn active" onclick="filterProperties('todos',this)">
+<button class="filter-btn active"
+onclick="filterProperties('todos',this)">
 TODAS
 </button>
 
-<button class="filter-btn" onclick="filterProperties('terreno',this)">
+<button class="filter-btn"
+onclick="filterProperties('terreno',this)">
 TERRENOS
 </button>
 
-<button class="filter-btn" onclick="filterProperties('lote',this)">
+<button class="filter-btn"
+onclick="filterProperties('lote',this)">
 LOTES
 </button>
 
-<button class="filter-btn" onclick="filterProperties('casa',this)">
+<button class="filter-btn"
+onclick="filterProperties('casa',this)">
 CASAS
 </button>
 
-<button class="filter-btn" onclick="filterProperties('local',this)">
+<button class="filter-btn"
+onclick="filterProperties('local',this)">
 LOCALES
 </button>
 
 </div>
 
 
-<div class="property-grid" id="propertyGrid">
+<div class="property-grid">
 
 
-<!-- 1 -->
+<!-- ================= PROPIEDAD 1 ================= -->
 
 <div class="property-card" data-type="terreno">
 
-<img src="CALLE%20ABEL%20SANCHES.png"
+<img
+src="CALLE%20ABEL%20SANCHES.png"
 class="property-image"
 alt="Terreno Calle Abel Sánchez Flores">
 
@@ -797,13 +815,17 @@ alt="Terreno Calle Abel Sánchez Flores">
 📍 Calle Abel Sánchez Flores, Ixtacuixtla de Mariano Matamoros, Tlaxcala
 </div>
 
-<div class="price">$270,000 MXN</div>
+<div class="price">
+$270,000 MXN
+</div>
 
 <div class="features">
+
 <div>📐 100 m²</div>
 <div>📏 10 × 10 m</div>
 <div>🚪 Privada 4 m</div>
 <div>✓ Libre de gravamen</div>
+
 </div>
 
 <p>
@@ -812,7 +834,8 @@ Agua, drenaje, luz y servicios de alcaldía.
 
 <div class="property-buttons">
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20terreno%20de%20Calle%20Abel%20Sánchez%20Flores"
 target="_blank">
 WhatsApp
@@ -824,13 +847,14 @@ WhatsApp
 </div>
 
 
-<!-- 2 -->
+<!-- ================= PROPIEDAD 2 ================= -->
 
 <div class="property-card" data-type="terreno">
 
-<img src="calle%2037%20lomA%20DE%20XICOTENCALT.png"
+<img
+src="calle%2037%20lomA%20DE%20XICOTENCALT.png"
 class="property-image"
-alt="Terreno Calle 37 La Loma Xicohténcatl">
+alt="Terreno Calle 37">
 
 <div class="property-content">
 
@@ -842,17 +866,22 @@ alt="Terreno Calle 37 La Loma Xicohténcatl">
 📍 Calle 37, La Loma Xicohténcatl, Tlaxcala
 </div>
 
-<div class="price">$1,250,000 MXN</div>
+<div class="price">
+$1,250,000 MXN
+</div>
 
 <div class="features">
+
 <div>📐 386.24 m²</div>
 <div>📏 13.60 × 28.40 m</div>
 <div>🏫 Frente a TET</div>
+
 </div>
 
 <div class="property-buttons">
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20terreno%20de%20Calle%2037"
 target="_blank">
 WhatsApp
@@ -864,11 +893,12 @@ WhatsApp
 </div>
 
 
-<!-- 3 -->
+<!-- ================= PROPIEDAD 3 ================= -->
 
 <div class="property-card" data-type="terreno">
 
-<img src="Carretera%20a%20San%20Rafael.png"
+<img
+src="Carretera%20a%20San%20Rafael.png"
 class="property-image"
 alt="Predio rumbo a San Rafael">
 
@@ -882,13 +912,17 @@ alt="Predio rumbo a San Rafael">
 📍 Carretera rumbo a San Rafael, cerca de CECYTE
 </div>
 
-<div class="price">$330,000 MXN</div>
+<div class="price">
+$330,000 MXN
+</div>
 
 <div class="features">
+
 <div>📐 300 m²</div>
 <div>📏 15 × 20 m</div>
 <div>💡 Luz</div>
 <div>💧 Agua</div>
+
 </div>
 
 <p>
@@ -897,7 +931,8 @@ Cuenta también con drenaje.
 
 <div class="property-buttons">
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20predio%20rumbo%20a%20San%20Rafael"
 target="_blank">
 WhatsApp
@@ -909,13 +944,14 @@ WhatsApp
 </div>
 
 
-<!-- 4 -->
+<!-- ================= PROPIEDAD 4 ================= -->
 
 <div class="property-card" data-type="lote">
 
-<img src="cerca%20de%20san%20baltazar%20.png"
+<img
+src="cerca%20de%20san%20baltazar%20.png"
 class="property-image"
-alt="Lotes cerca de San Baltazar Temaxcalac">
+alt="Lotes San Baltazar">
 
 <div class="property-content">
 
@@ -932,10 +968,12 @@ Desde $109,000 MXN
 </div>
 
 <div class="features">
+
 <div>📐 90.88 m² referencia</div>
 <div>🌳 Predio rústico</div>
 <div>💡 Luz</div>
 <div>🏷️ 24 lotes</div>
+
 </div>
 
 <p>
@@ -944,7 +982,8 @@ Precios desde $109,000 hasta $200,000 MXN según lote.
 
 <div class="property-buttons">
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/52482689365?text=Hola,%20me%20interesan%20los%20lotes%20cerca%20de%20San%20Baltazar"
 target="_blank">
 Consultar
@@ -956,11 +995,12 @@ Consultar
 </div>
 
 
-<!-- 5 -->
+<!-- ================= PROPIEDAD 5 ================= -->
 
 <div class="property-card" data-type="casa">
 
-<img src="camino%20real%20a%20san%20carlos.png"
+<img
+src="camino%20real%20a%20san%20carlos.png"
 class="property-image"
 alt="Casa Camino Real a San Carlos">
 
@@ -974,18 +1014,23 @@ alt="Casa Camino Real a San Carlos">
 📍 Calle Camino Real a San Carlos, Tepetitla de Lardizabal
 </div>
 
-<div class="price">$3,500,000 MXN</div>
+<div class="price">
+$3,500,000 MXN
+</div>
 
 <div class="features">
+
 <div>🏠 Casa</div>
 <div>💧 Agua</div>
 <div>💡 Luz</div>
 <div>🚰 Drenaje</div>
+
 </div>
 
 <div class="property-buttons">
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20la%20casa%20de%20Camino%20Real%20a%20San%20Carlos"
 target="_blank">
 WhatsApp
@@ -997,11 +1042,12 @@ WhatsApp
 </div>
 
 
-<!-- 6 -->
+<!-- ================= PROPIEDAD 6 ================= -->
 
 <div class="property-card" data-type="terreno">
 
-<img src="Amaxac%20de%20Guerrero.png"
+<img
+src="Amaxac%20de%20Guerrero.png"
 class="property-image"
 alt="Terreno Amaxac de Guerrero">
 
@@ -1015,22 +1061,27 @@ alt="Terreno Amaxac de Guerrero">
 📍 Amaxac de Guerrero, Tlaxcala
 </div>
 
-<div class="price">$1,350,000 MXN</div>
+<div class="price">
+$1,350,000 MXN
+</div>
 
 <div class="features">
+
 <div>📐 962 m²</div>
 <div>📏 Frente 13 m</div>
 <div>✓ Libre de gravamen</div>
 <div>🏫 Cerca de CONALEP 056</div>
+
 </div>
 
 <p>
-Cuenta con agua, drenaje y electricidad.
+Agua, drenaje y electricidad.
 </p>
 
 <div class="property-buttons">
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20terreno%20en%20Amaxac%20de%20Guerrero"
 target="_blank">
 WhatsApp
@@ -1042,13 +1093,14 @@ WhatsApp
 </div>
 
 
-<!-- 7 -->
+<!-- ================= PROPIEDAD 7 ================= -->
 
 <div class="property-card" data-type="lote">
 
-<img src="terreno%203%20besanas.png"
+<img
+src="terreno%203%20besanas.png"
 class="property-image"
-alt="Terreno 3 Besanas Tepetitla">
+alt="Terreno 3 Besanas">
 
 <div class="property-content">
 
@@ -1060,13 +1112,17 @@ alt="Terreno 3 Besanas Tepetitla">
 📍 Tepetitla de Lardizabal, Tlaxcala
 </div>
 
-<div class="price">Consultar</div>
+<div class="price">
+Consultar
+</div>
 
 <div class="features">
+
 <div>📐 21,794.6781 m²</div>
 <div>📏 Norte 488.37 m</div>
 <div>📏 Sur 480.39 m</div>
 <div>📏 Oriente 44.71 m</div>
+
 </div>
 
 <p>
@@ -1075,7 +1131,8 @@ Poniente: 45.28 m. Precio y condiciones a consultar.
 
 <div class="property-buttons">
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20terreno%203%20Besanas"
 target="_blank">
 Consultar
@@ -1087,13 +1144,14 @@ Consultar
 </div>
 
 
-<!-- 8 -->
+<!-- ================= PROPIEDAD 8 ================= -->
 
 <div class="property-card" data-type="casa">
 
-<img src="Privada%20Los%20Pinos%201-B.png"
+<img
+src="Privada%20Los%20Pinos%201-B.png"
 class="property-image"
-alt="Casa Privada Los Pinos 1-B">
+alt="Casa Privada Los Pinos">
 
 <div class="property-content">
 
@@ -1105,22 +1163,28 @@ alt="Casa Privada Los Pinos 1-B">
 📍 Privada Los Pinos 1-B, Villa Alta
 </div>
 
-<div class="price">$2,300,000 MXN</div>
+<div class="price">
+$2,300,000 MXN
+</div>
 
 <div class="features">
+
 <div>📐 Terreno 208 m²</div>
 <div>🏗️ Construcción 152 m²</div>
 <div>🛏️ 3 recámaras</div>
 <div>🚿 2 baños</div>
+
 </div>
 
 <p>
-Tres niveles, terraza y espacio adicional para estacionamiento de hasta 8 vehículos. Tercer nivel en obra gris.
+Tres niveles, terraza y estacionamiento para hasta 8 vehículos.
+Tercer nivel en obra gris.
 </p>
 
 <div class="property-buttons">
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20la%20casa%20de%20Privada%20Los%20Pinos"
 target="_blank">
 WhatsApp
@@ -1132,11 +1196,12 @@ WhatsApp
 </div>
 
 
-<!-- 9 -->
+<!-- ================= PROPIEDAD 9 ================= -->
 
 <div class="property-card" data-type="casa">
 
-<img src="Calle%20Emiliano%20Carranza.png"
+<img
+src="Calle%20Emiliano%20Carranza.png"
 class="property-image"
 alt="Casa Calle Emiliano Carranza">
 
@@ -1150,13 +1215,17 @@ alt="Casa Calle Emiliano Carranza">
 📍 Calle Emiliano Carranza, Tepetitla de Lardizabal
 </div>
 
-<div class="price">$1,250,000 MXN</div>
+<div class="price">
+$1,250,000 MXN
+</div>
 
 <div class="features">
+
 <div>📐 99.88 m²</div>
 <div>🛏️ 4 recámaras</div>
 <div>🚿 2 baños</div>
 <div>🏦 INFONAVIT</div>
+
 </div>
 
 <p>
@@ -1165,7 +1234,8 @@ Cuenta con terraza y servicios de agua, electricidad y drenaje.
 
 <div class="property-buttons">
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20la%20casa%20de%20Calle%20Emiliano%20Carranza"
 target="_blank">
 WhatsApp
@@ -1177,13 +1247,14 @@ WhatsApp
 </div>
 
 
-<!-- 10 -->
+<!-- ================= PROPIEDAD 10 ================= -->
 
 <div class="property-card" data-type="lote">
 
-<img src="Cerca%20de%20Primaria%20Abraham%20Castellanos.png"
+<img
+src="Cerca%20de%20Primaria%20Abraham%20Castellanos.png"
 class="property-image"
-alt="Lotes cerca de Primaria Abraham Castellanos">
+alt="Lotes Abraham Castellanos">
 
 <div class="property-content">
 
@@ -1200,19 +1271,22 @@ Desde $107,780 MXN
 </div>
 
 <div class="features">
+
 <div>🏷️ Lotes 3 al 8</div>
 <div>💧 Agua</div>
 <div>💡 Luz</div>
 <div>🚰 Drenaje</div>
+
 </div>
 
 <p>
-Lotes 1 y 2 vendidos. Disponibles actualmente los lotes 3, 4, 5, 6, 7 y 8.
+Lotes 1 y 2 vendidos. Disponibles los lotes 3, 4, 5, 6, 7 y 8.
 </p>
 
 <div class="property-buttons">
 
-<a class="whatsapp"
+<a
+class="whatsapp"
 href="https://wa.me/52482689365?text=Hola,%20me%20interesan%20los%20lotes%20cerca%20de%20la%20Primaria%20Abraham%20Castellanos"
 target="_blank">
 Consultar
@@ -1224,11 +1298,12 @@ Consultar
 </div>
 
 
-<!-- 11 -->
+<!-- ================= PROPIEDAD 11 ================= -->
 
 <div class="property-card" data-type="local">
 
-<img src="Local%20en%20Venta%20de%20Autopista%20San%20Martín%E2%80%93Tlaxcala.png"
+<img
+src="Local%20en%20Venta%20de%20Autopista%20San%20Mart%C3%ADn%E2%80%93Tlaxcala.png"
 class="property-image"
 alt="Local en Venta Autopista San Martín Tlaxcala">
 
@@ -1242,15 +1317,19 @@ alt="Local en Venta Autopista San Martín Tlaxcala">
 📍 Autopista San Martín–Tlaxcala 5, San Gabriel Popocatla, Tlaxcala
 </div>
 
-<div class="price">$2,400,000 MXN</div>
+<div class="price">
+$2,400,000 MXN
+</div>
 
 <div class="features">
+
 <div>📐 Terreno 120 m²</div>
 <div>🏗️ Construcción 299 m²</div>
 <div>🛏️ 2 recámaras</div>
 <div>🚿 1 baño + 2 medios</div>
 <div>🚗 1 estacionamiento</div>
 <div>🏢 2 niveles</div>
+
 </div>
 
 <p>
@@ -1260,8 +1339,9 @@ Ideal para restaurante, cafetería, comercio, oficina o negocio con vivienda.
 
 <div class="property-buttons">
 
-<a class="whatsapp"
-href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20local%20de%20la%20Autopista%20San%20Martín–Tlaxcala"
+<a
+class="whatsapp"
+href="https://wa.me/52482689365?text=Hola,%20me%20interesa%20el%20local%20de%20la%20Autopista%20San%20Mart%C3%ADn%E2%80%93Tlaxcala"
 target="_blank">
 WhatsApp
 </a>
@@ -1416,7 +1496,8 @@ function filterProperties(type, button){
 
         if(type === "todos" || card.dataset.type === type){
             card.style.display = "block";
-        }else{
+        }
+        else{
             card.style.display = "none";
         }
 

@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,10 +7,7 @@
 
 <title>Inmobiliaria Linda Vista | Bienes Raíces, Arquitectura e Ingeniería</title>
 
-<meta name="description" content="Inmobiliaria Linda Vista. Compra, venta y asesoría inmobiliaria. Servicios de arquitectura, ingeniería y asesoría legal en Tlaxcala.">
-
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -19,1275 +17,976 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f7f6f2;
-    color:#142943;
+    color:#222;
+    background:#f7f7f7;
     line-height:1.6;
 }
 
-/* ================= HEADER ================= */
-
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:white;
-    box-shadow:0 3px 15px rgba(0,0,0,.12);
-}
-
-.header-container{
-    max-width:1250px;
-    margin:auto;
-    padding:12px 25px;
+    background:#0b1f3a;
+    color:white;
+    padding:15px 7%;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:30px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
 }
 
 .logo{
-    width:95px;
-    height:95px;
+    width:150px;
+    height:auto;
     object-fit:contain;
 }
 
-nav{
-    display:flex;
-    align-items:center;
-    gap:28px;
-    flex-wrap:wrap;
-}
-
 nav a{
+    color:white;
     text-decoration:none;
-    color:#142943;
+    margin-left:25px;
     font-weight:bold;
-    font-size:15px;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#c6922e;
+    color:#d4af37;
 }
 
-/* ================= HERO ================= */
-
 .hero{
-    min-height:82vh;
+    min-height:520px;
     background:
-        linear-gradient(rgba(20,41,67,.92),rgba(20,41,67,.78)),
-        radial-gradient(circle at center,#35516d,#142943);
+        linear-gradient(rgba(11,31,58,.82),rgba(11,31,58,.82)),
+        url("logo.jpg");
+    background-size:cover;
+    background-position:center;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:80px 25px;
+    color:white;
+    padding:60px 20px;
 }
 
 .hero-content{
-    max-width:900px;
-    color:white;
-}
-
-.hero-small{
-    color:#d4a23c;
-    font-size:18px;
-    font-weight:bold;
-    letter-spacing:2px;
-    margin-bottom:18px;
-    text-transform:uppercase;
+    max-width:850px;
 }
 
 .hero h1{
-    font-size:60px;
-    line-height:1.1;
-    margin-bottom:25px;
-}
-
-.hero h1 span{
-    color:#d4a23c;
-}
-
-.hero p{
-    font-size:23px;
-    margin-bottom:35px;
-    color:#f1f1f1;
-}
-
-.botones{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.boton{
-    display:inline-block;
-    padding:14px 28px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.boton-dorado{
-    background:#c6922e;
-    color:white;
-}
-
-.boton-dorado:hover{
-    background:#a87920;
-    transform:translateY(-3px);
-}
-
-.boton-blanco{
-    background:white;
-    color:#142943;
-}
-
-.boton-blanco:hover{
-    background:#eee;
-    transform:translateY(-3px);
-}
-
-/* ================= GENERAL ================= */
-
-section{
-    padding:80px 7%;
-}
-
-.contenedor{
-    max-width:1200px;
-    margin:auto;
-}
-
-.titulo{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.titulo h2{
-    font-size:40px;
-    margin-bottom:12px;
-    color:#142943;
-}
-
-.titulo h2 span{
-    color:#c6922e;
-}
-
-.titulo p{
-    color:#666;
-    font-size:17px;
-}
-
-/* ================= PROPIEDADES ================= */
-
-.propiedades{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:28px;
-}
-
-.tarjeta{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 5px 25px rgba(0,0,0,.10);
-    transition:.3s;
-    display:flex;
-    flex-direction:column;
-}
-
-.tarjeta:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 30px rgba(0,0,0,.16);
-}
-
-.imagen{
-    height:210px;
-    background:linear-gradient(135deg,#d9d9d9,#eeeeee);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#777;
-    font-weight:bold;
-}
-
-.contenido{
-    padding:25px;
-    flex:1;
-}
-
-.etiqueta{
-    display:inline-block;
-    background:#142943;
-    color:white;
-    padding:5px 12px;
-    border-radius:20px;
-    font-size:12px;
-    margin-bottom:12px;
-}
-
-.contenido h3{
-    font-size:22px;
-    margin-bottom:10px;
-}
-
-.ubicacion{
-    color:#666;
-    margin-bottom:10px;
-}
-
-.precio{
-    color:#c6922e;
-    font-size:24px;
-    font-weight:bold;
-    margin:15px 0;
-}
-
-.datos{
-    margin:15px 0;
-    color:#555;
-}
-
-.datos div{
-    margin:5px 0;
-}
-
-/* ================= SERVICIOS ================= */
-
-.servicios{
-    background:#142943;
-    color:white;
-}
-
-.servicios .titulo h2{
-    color:white;
-}
-
-.servicios .titulo p{
-    color:#ddd;
-}
-
-.lista-servicios{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:25px;
-}
-
-.servicio{
-    background:rgba(255,255,255,.07);
-    border:1px solid rgba(212,162,60,.25);
-    border-radius:12px;
-    padding:32px 25px;
-    text-align:center;
-    transition:.3s;
-}
-
-.servicio:hover{
-    transform:translateY(-5px);
-    background:rgba(255,255,255,.11);
-}
-
-.icono{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.servicio h3{
-    color:#d4a23c;
-    font-size:22px;
-    margin-bottom:12px;
-}
-
-.servicio p{
-    color:#eee;
-}
-
-.servicio ul{
-    list-style:none;
-    margin-top:15px;
-    color:#ddd;
-    text-align:left;
-}
-
-.servicio li{
-    margin:7px 0;
-}
-
-/* ================= NOSOTROS ================= */
-
-.nosotros{
-    max-width:950px;
-    margin:auto;
-    text-align:center;
-}
-
-.nosotros p{
-    font-size:19px;
-    color:#555;
+    font-size:48px;
     margin-bottom:20px;
 }
 
-/* ================= CONTACTO ================= */
-
-.contacto{
-    background:#eeeae0;
+.hero h1 span{
+    color:#d4af37;
 }
 
-.contacto-grid{
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
+    transition:.3s;
+}
+
+.btn-gold{
+    background:#d4af37;
+    color:#0b1f3a;
+}
+
+.btn-gold:hover{
+    background:#fff;
+}
+
+.btn-outline{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#0b1f3a;
+}
+
+section{
+    padding:70px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    color:#0b1f3a;
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.section-title span{
+    display:block;
+    width:70px;
+    height:4px;
+    background:#d4af37;
+    margin:auto;
+}
+
+.properties{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:25px;
 }
 
-.contacto-card{
+.card{
     background:white;
-    padding:30px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
 }
 
-.contacto-card h3{
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.card-image{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+    background:#ddd;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    color:#0b1f3a;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.price{
+    color:#b08a00;
+    font-size:22px;
+    font-weight:bold;
     margin:10px 0;
 }
 
-.contacto-card p{
-    color:#555;
+.details{
+    margin:15px 0;
 }
 
-.contacto-card a{
-    color:#142943;
+.details p{
+    margin:5px 0;
+}
+
+.card .btn{
+    margin:10px 0 0;
+}
+
+.services{
+    background:#0b1f3a;
+    color:white;
+}
+
+.services .section-title h2{
+    color:white;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-box{
+    background:#132d50;
+    padding:30px;
+    border-radius:10px;
+    border:1px solid rgba(212,175,55,.3);
+}
+
+.service-box h3{
+    color:#d4af37;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.service-box ul{
+    padding-left:20px;
+}
+
+.service-box li{
+    margin:8px 0;
+}
+
+.about{
+    background:white;
+}
+
+.about-content{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-content h3{
+    color:#0b1f3a;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    margin-bottom:15px;
+}
+
+.contact{
+    background:#f0f0f0;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.contact-box h3{
+    color:#0b1f3a;
+    margin-bottom:15px;
+}
+
+.contact-box a{
+    color:#0b1f3a;
     font-weight:bold;
     text-decoration:none;
 }
 
-.contacto-card a:hover{
-    color:#c6922e;
+.whatsapp{
+    background:#25D366;
+    color:white !important;
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:5px;
+    margin-top:10px;
 }
-
-/* ================= HORARIOS ================= */
-
-.horarios{
-    background:white;
-    text-align:center;
-}
-
-.horarios-box{
-    max-width:600px;
-    margin:auto;
-    background:#f7f6f2;
-    padding:30px;
-    border-radius:12px;
-}
-
-.horarios-box p{
-    margin:10px 0;
-    font-size:18px;
-}
-
-/* ================= CTA ================= */
-
-.cta{
-    background:#142943;
-    text-align:center;
-    color:white;
-}
-
-.cta h2{
-    font-size:38px;
-    margin-bottom:15px;
-}
-
-.cta p{
-    font-size:19px;
-    margin-bottom:25px;
-    color:#ddd;
-}
-
-/* ================= FOOTER ================= */
 
 footer{
-    background:#0b1b2d;
+    background:#071629;
     color:white;
     text-align:center;
-    padding:35px 20px;
+    padding:30px 20px;
 }
 
-footer img{
-    width:80px;
-    margin-bottom:15px;
+footer strong{
+    color:#d4af37;
 }
 
-footer p{
-    margin:7px 0;
-    color:#ddd;
-}
-
-.footer-dorado{
-    color:#d4a23c;
-}
-
-/* ================= WHATSAPP ================= */
-
-.whatsapp{
+.float-whatsapp{
     position:fixed;
-    right:22px;
-    bottom:22px;
-    z-index:2000;
+    right:20px;
+    bottom:20px;
     background:#25D366;
     color:white;
-    width:58px;
-    height:58px;
+    width:60px;
+    height:60px;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
     text-decoration:none;
-    font-size:28px;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
-    transition:.3s;
+    font-size:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    z-index:999;
 }
 
-.whatsapp:hover{
-    transform:scale(1.1);
-}
+@media(max-width:768px){
 
-/* ================= CELULAR ================= */
-
-@media(max-width:800px){
-
-    .header-container{
+    header{
         flex-direction:column;
-        padding:10px 15px;
-    }
-
-    .logo{
-        width:80px;
-        height:80px;
+        gap:15px;
     }
 
     nav{
-        justify-content:center;
-        gap:14px;
+        text-align:center;
     }
 
     nav a{
-        font-size:13px;
-    }
-
-    .hero{
-        min-height:75vh;
-        padding:60px 20px;
+        margin:5px 8px;
+        display:inline-block;
     }
 
     .hero h1{
-        font-size:40px;
+        font-size:34px;
     }
 
     .hero p{
-        font-size:18px;
+        font-size:17px;
     }
 
     section{
-        padding:60px 5%;
+        padding:50px 5%;
     }
-
-    .titulo h2{
-        font-size:32px;
-    }
-
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
 
-<div class="header-container">
+    <img src="logo.jpg" alt="Inmobiliaria Linda Vista" class="logo">
 
-<a href="#inicio">
-<img src="logo.jpg" alt="Inmobiliaria Linda Vista" class="logo">
-</a>
-
-<nav>
-<a href="#inicio">Inicio</a>
-<a href="#propiedades">Propiedades</a>
-<a href="#servicios">Servicios</a>
-<a href="#nosotros">Nosotros</a>
-<a href="#contacto">Contacto</a>
-</nav>
-
-</div>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#propiedades">Propiedades</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 
 </header>
 
 
-<!-- ================= PORTADA ================= -->
+<!-- INICIO -->
 
 <section class="hero" id="inicio">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<div class="hero-small">
-Inmobiliaria Linda Vista
-</div>
+        <h1>
+            Encuentra el lugar para
+            <span>construir tu futuro</span>
+        </h1>
 
-<h1>
-Encuentra el lugar para<br>
-<span>construir tu futuro</span>
-</h1>
+        <p>
+            Compra, venta y asesoría inmobiliaria con el respaldo
+            de profesionales en arquitectura, ingeniería y servicios legales.
+        </p>
 
-<p>
-Compra, venta y asesoría inmobiliaria,
-con servicios profesionales de arquitectura,
-ingeniería y asesoría legal.
-</p>
+        <a href="#propiedades" class="btn btn-gold">
+            Ver propiedades
+        </a>
 
-<div class="botones">
+        <a href="#contacto" class="btn btn-outline">
+            Contáctanos
+        </a>
 
-<a href="#propiedades" class="boton boton-dorado">
-Ver propiedades
-</a>
-
-<a href="#contacto" class="boton boton-blanco">
-Contáctanos
-</a>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= PROPIEDADES ================= -->
+<!-- PROPIEDADES -->
 
 <section id="propiedades">
 
-<div class="contenedor">
+    <div class="section-title">
 
-<div class="titulo">
+        <h2>Propiedades en Venta</h2>
 
-<h2>Propiedades <span>en venta</span></h2>
+        <span></span>
 
-<p>
-Conoce algunas de nuestras opciones disponibles.
-</p>
+        <p style="margin-top:15px;">
+            Encuentra terrenos y propiedades disponibles con
+            Inmobiliaria Linda Vista.
+        </p>
 
-</div>
+    </div>
 
 
-<div class="propiedades">
+    <div class="properties">
 
 
-<!-- PROPIEDAD 1 -->
+        <!-- PROPIEDAD 1 -->
 
-<div class="tarjeta">
+        <div class="card">
 
-<div class="imagen">
-Fotografía de propiedad
-</div>
+            <img
+                src="CALLE%20ABEL%20SANCHES.png"
+                alt="Terreno Calle Abel Sánchez Flores"
+                class="card-image"
+            >
 
-<div class="contenido">
+            <div class="card-content">
 
-<span class="etiqueta">
-TERRENO EN VENTA
-</span>
+                <h3>Terreno en Venta</h3>
 
-<h3>
-Calle Abel Sánchez Flores
-</h3>
+                <p>
+                    Calle Abel Sánchez Flores,
+                    Ixtacuixtla de Mariano Matamoros, Tlaxcala.
+                </p>
 
-<p class="ubicacion">
-Ixtacuixtla de Mariano Matamoros, Tlaxcala
-</p>
+                <div class="price">
+                    $270,000 MXN
+                </div>
 
-<div class="precio">
-$270,000 MXN
-</div>
+                <div class="details">
 
-<div class="datos">
+                    <p>📐 <strong>Superficie:</strong> 100 m²</p>
 
-<div>📐 100 m²</div>
-<div>📏 10 m × 10 m</div>
-<div>🚗 Privada de 4 m</div>
-<div>💧 Agua y drenaje</div>
-<div>💡 Luz</div>
-<div>🏛️ Servicios de Alcaldía</div>
-<div>📄 Libre de gravamen: Sí</div>
+                    <p>📏 <strong>Medidas:</strong> 10 × 10 m</p>
 
-</div>
+                    <p>🚗 <strong>Privada:</strong> 4 m</p>
 
-<a class="boton boton-dorado"
-href="https://wa.me/522482689365?text=Hola%20Inmobiliaria%20Linda%20Vista,%20me%20interesa%20el%20terreno%20de%20Calle%20Abel%20S%C3%A1nchez%20Flores.">
-Solicitar información
-</a>
+                    <p>💧 Agua</p>
 
-</div>
+                    <p>⚡ Luz</p>
 
-</div>
+                    <p>🚰 Drenaje</p>
 
+                    <p>📄 Libre de gravamen: Sí</p>
 
-<!-- PROPIEDAD 2 -->
+                </div>
 
-<div class="tarjeta">
+                <a
+                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20el%20terreno%20de%20Calle%20Abel%20S%C3%A1nchez"
+                    class="btn whatsapp"
+                    target="_blank"
+                >
+                    Solicitar información
+                </a>
 
-<div class="imagen">
-Fotografía de propiedad
-</div>
+            </div>
 
-<div class="contenido">
+        </div>
 
-<span class="etiqueta">
-TERRENO EN VENTA
-</span>
 
-<h3>
-Calle 37, La Loma Xicohténcatl
-</h3>
+        <!-- PROPIEDAD 2 -->
 
-<p class="ubicacion">
-Tlaxcala de Xicohténcatl, Tlaxcala
-</p>
+        <div class="card">
 
-<div class="precio">
-$1,250,000 MXN
-</div>
+            <img
+                src="calle%2037%20lomA%20DE%20XICOTENCALT.png"
+                alt="Terreno Calle 37 La Loma Xicohténcatl"
+                class="card-image"
+            >
 
-<div class="datos">
+            <div class="card-content">
 
-<div>📐 386.24 m²</div>
-<div>📏 Frente: 13.60 m</div>
-<div>📏 Fondo: 28.40 m</div>
-<div>📍 Frente a TET</div>
+                <h3>Terreno en Venta</h3>
 
-</div>
+                <p>
+                    Calle 37, La Loma Xicohténcatl,
+                    Tlaxcala de Xicohténcatl, Tlaxcala.
+                </p>
 
-<a class="boton boton-dorado"
-href="https://wa.me/522482689365?text=Hola%20Inmobiliaria%20Linda%20Vista,%20me%20interesa%20el%20terreno%20de%20Calle%2037.">
-Solicitar información
-</a>
+                <p>
+                    Frente a TET.
+                </p>
 
-</div>
+                <div class="price">
+                    $1,250,000 MXN
+                </div>
 
-</div>
+                <div class="details">
 
+                    <p>📐 <strong>Superficie:</strong> 386.24 m²</p>
 
-<!-- PROPIEDAD 3 -->
+                    <p>📏 <strong>Medidas:</strong> 13.60 × 28.40 m</p>
 
-<div class="tarjeta">
+                </div>
 
-<div class="imagen">
-Fotografía de propiedad
-</div>
+                <a
+                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20el%20terreno%20de%20Calle%2037%20La%20Loma%20Xicoht%C3%A9ncatl"
+                    class="btn whatsapp"
+                    target="_blank"
+                >
+                    Solicitar información
+                </a>
 
-<div class="contenido">
+            </div>
 
-<span class="etiqueta">
-PREDIO EN VENTA
-</span>
+        </div>
 
-<h3>
-Carretera a San Rafael
-</h3>
 
-<p class="ubicacion">
-Cerca de CECYTE
-</p>
+        <!-- PROPIEDAD 3 -->
 
-<div class="precio">
-$330,000 MXN
-</div>
+        <div class="card">
 
-<div class="datos">
+            <img
+                src="Carretera%20a%20San%20Rafael.png"
+                alt="Predio carretera a San Rafael"
+                class="card-image"
+            >
 
-<div>📐 300 m²</div>
-<div>📏 15 m × 20 m</div>
-<div>💧 Agua</div>
-<div>💡 Luz</div>
-<div>🚰 Drenaje</div>
+            <div class="card-content">
 
-</div>
+                <h3>Predio en Venta</h3>
 
-<a class="boton boton-dorado"
-href="https://wa.me/522482689365?text=Hola%20Inmobiliaria%20Linda%20Vista,%20me%20interesa%20el%20predio%20cerca%20de%20CECYTE.">
-Solicitar información
-</a>
+                <p>
+                    Carretera rumbo a San Rafael,
+                    cerca de CECYTE.
+                </p>
 
-</div>
+                <div class="price">
+                    $330,000 MXN
+                </div>
 
-</div>
+                <div class="details">
 
+                    <p>📐 <strong>Superficie:</strong> 300 m²</p>
 
-<!-- PROPIEDAD 4 -->
+                    <p>📏 <strong>Medidas:</strong> 15 × 20 m</p>
 
-<div class="tarjeta">
+                    <p>💧 Agua</p>
 
-<div class="imagen">
-Fotografía de propiedad
-</div>
+                    <p>⚡ Luz</p>
 
-<div class="contenido">
+                    <p>🚰 Drenaje</p>
 
-<span class="etiqueta">
-PREDIO RÚSTICO
-</span>
+                </div>
 
-<h3>
-Cerca de San Baltazar Temaxcalac
-</h3>
+                <a
+                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20el%20predio%20rumbo%20a%20San%20Rafael"
+                    class="btn whatsapp"
+                    target="_blank"
+                >
+                    Solicitar información
+                </a>
 
-<p class="ubicacion">
-Tlaxcala
-</p>
+            </div>
 
-<div class="precio">
-Desde $136,000 MXN
-</div>
+        </div>
 
-<div class="datos">
 
-<div>📐 Superficie total: 3,362.024 m²</div>
-<div>📏 Lotes de aproximadamente 90.88 m²</div>
-<div>📍 Lote 1: $145,000</div>
-<div>📍 Lotes 2–4: $136,000 c/u</div>
+        <!-- PROPIEDAD 4 -->
 
-</div>
+        <div class="card">
 
-<a class="boton boton-dorado"
-href="https://wa.me/522482689365?text=Hola%20Inmobiliaria%20Linda%20Vista,%20me%20interesan%20los%20lotes%20cerca%20de%20San%20Baltazar%20Temaxcalac.">
-Solicitar información
-</a>
+            <img
+                src="cerca%20de%20san%20baltazar%20.png"
+                alt="Predios cerca de San Baltazar Temaxcalac"
+                class="card-image"
+            >
 
-</div>
+            <div class="card-content">
 
-</div>
+                <h3>Predios en Venta</h3>
 
+                <p>
+                    Cerca de San Baltazar Temaxcalac.
+                </p>
 
-<!-- PROPIEDAD 5 -->
+                <div class="price">
+                    Desde $136,000 MXN
+                </div>
 
-<div class="tarjeta">
+                <div class="details">
 
-<div class="imagen">
-Fotografía de propiedad
-</div>
+                    <p>
+                        📐 <strong>Superficie total:</strong>
+                        3,362.024 m²
+                    </p>
 
-<div class="contenido">
+                    <p>
+                        📏 <strong>Medida por lote:</strong>
+                        90.88 m²
+                    </p>
 
-<span class="etiqueta">
-PREDIO EN VENTA
-</span>
+                    <p>
+                        📏 <strong>Medidas:</strong>
+                        11.36 × 8.00 m
+                    </p>
 
-<h3>
-Camino Real a San Carlos
-</h3>
+                    <p>
+                        🌳 <strong>Tipo:</strong> Rústico
+                    </p>
 
-<p class="ubicacion">
-Tepetitla de Lardizabal, Tlaxcala
-</p>
+                    <p>
+                        <strong>Lote 1:</strong> $145,000 MXN
+                    </p>
 
-<div class="precio">
-$1,400,000 MXN
-</div>
+                    <p>
+                        <strong>Lotes 2, 3 y 4:</strong>
+                        $136,000 MXN
+                    </p>
 
-<div class="datos">
+                </div>
 
-<div>📐 2,750 m²</div>
-<div>📏 125 m × 22 m</div>
-<div>🌳 Excelente superficie para proyecto</div>
+                <a
+                    href="https://wa.me/522482689365?text=Hola,%20me%20interesan%20los%20predios%20cerca%20de%20San%20Baltazar%20Temaxcalac"
+                    class="btn whatsapp"
+                    target="_blank"
+                >
+                    Solicitar información
+                </a>
 
-</div>
+            </div>
 
-<a class="boton boton-dorado"
-href="https://wa.me/522482689365?text=Hola%20Inmobiliaria%20Linda%20Vista,%20me%20interesa%20el%20predio%20de%20Camino%20Real%20a%20San%20Carlos.">
-Solicitar información
-</a>
+        </div>
 
-</div>
 
-</div>
+        <!-- PROPIEDAD 5 -->
 
+        <div class="card">
 
-<!-- PROPIEDAD 6 -->
+            <img
+                src="camino%20real%20a%20san%20carlos.png"
+                alt="Propiedad Camino Real a San Carlos"
+                class="card-image"
+            >
 
-<div class="tarjeta">
+            <div class="card-content">
 
-<div class="imagen">
-Fotografía de propiedad
-</div>
+                <h3>Casa en Venta</h3>
 
-<div class="contenido">
+                <p>
+                    Camino Real a San Carlos,
+                    Tepetitla de Lardizabal, Tlaxcala.
+                </p>
 
-<span class="etiqueta">
-TERRENO EN VENTA
-</span>
+                <div class="price">
+                    $3,500,000 MXN
+                </div>
 
-<h3>
-Calle 18 de Marzo
-</h3>
+                <div class="details">
 
-<p class="ubicacion">
-Tepetitla de Lardizabal, Tlaxcala
-</p>
+                    <p>
+                        🏠 Propiedad con casa
+                    </p>
 
-<div class="precio">
-$270,000 MXN · A tratar
-</div>
+                    <p>
+                        📐 Amplio terreno
+                    </p>
 
-<div class="datos">
+                    <p>
+                        📍 Excelente ubicación
+                    </p>
 
-<div>📐 215.74 m²</div>
-<div>📏 Frente: 13.40 m</div>
-<div>📏 Fondo: 16.10 m</div>
-<div>📄 Libre de gravamen: Sí</div>
+                </div>
 
-</div>
+                <a
+                    href="https://wa.me/522482689365?text=Hola,%20me%20interesa%20la%20casa%20de%20Camino%20Real%20a%20San%20Carlos"
+                    class="btn whatsapp"
+                    target="_blank"
+                >
+                    Solicitar información
+                </a>
 
-<a class="boton boton-dorado"
-href="https://wa.me/522482689365?text=Hola%20Inmobiliaria%20Linda%20Vista,%20me%20interesa%20el%20terreno%20de%20Calle%2018%20de%20Marzo.">
-Solicitar información
-</a>
+            </div>
 
-</div>
+        </div>
 
-</div>
 
-
-<!-- PROPIEDAD 7 -->
-
-<div class="tarjeta">
-
-<div class="imagen">
-Fotografía de propiedad
-</div>
-
-<div class="contenido">
-
-<span class="etiqueta">
-LOCAL EN VENTA
-</span>
-
-<h3>
-Autopista San Martín–Tlaxcala 5
-</h3>
-
-<p class="ubicacion">
-San Gabriel Popocatla, Tlaxcala
-</p>
-
-<div class="precio">
-$2,400,000 MXN
-</div>
-
-<div class="datos">
-
-<div>📐 Terreno: 120 m²</div>
-<div>🏗️ Construcción: 299 m²</div>
-<div>🛏️ 2 recámaras</div>
-<div>🚿 1 baño + 2 medios baños</div>
-<div>🚗 1 estacionamiento</div>
-<div>🏢 2 niveles</div>
-<div>📅 Construcción: 2020</div>
-<div>📄 Libre de gravamen: Sí</div>
-
-</div>
-
-<a class="boton boton-dorado"
-href="https://wa.me/522482689365?text=Hola%20Inmobiliaria%20Linda%20Vista,%20me%20interesa%20el%20local%20de%20San%20Gabriel%20Popocatla.">
-Solicitar información
-</a>
-
-</div>
-
-</div>
-
-
-<!-- PROPIEDAD 8 -->
-
-<div class="tarjeta">
-
-<div class="imagen">
-Fotografía de propiedad
-</div>
-
-<div class="contenido">
-
-<span class="etiqueta">
-TERRENO EN VENTA
-</span>
-
-<h3>
-Calle Francisco Villa esquina Calle del Agrarista
-</h3>
-
-<p class="ubicacion">
-Tepetitla de Lardizabal, Tlaxcala
-</p>
-
-<div class="precio">
-Consultar precio
-</div>
-
-<div class="datos">
-
-<div>📐 207.10 m²</div>
-<div>📏 Frente: 19 m</div>
-<div>📏 Fondo: 10.90 m</div>
-<div>📐 Terreno regular</div>
-<div>💧 Agua</div>
-<div>💡 Luz</div>
-<div>🚰 Drenaje</div>
-<div>📍 A una calle de Tienda Comex</div>
-
-</div>
-
-<a class="boton boton-dorado"
-href="https://wa.me/522482689365?text=Hola%20Inmobiliaria%20Linda%20Vista,%20me%20interesa%20el%20terreno%20de%20Calle%20Francisco%20Villa.">
-Solicitar información
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= SERVICIOS ================= -->
+<!-- SERVICIOS -->
 
-<section class="servicios" id="servicios">
+<section class="services" id="servicios">
 
-<div class="contenedor">
+    <div class="section-title">
 
-<div class="titulo">
+        <h2>Nuestros Servicios</h2>
 
-<h2>Servicios <span>profesionales</span></h2>
+        <span></span>
 
-<p>
-Soluciones integrales para tus proyectos inmobiliarios y de construcción.
-</p>
-
-</div>
+    </div>
 
 
-<div class="lista-servicios">
+    <div class="service-grid">
 
 
-<div class="servicio">
+        <div class="service-box">
 
-<div class="icono">🏠</div>
+            <h3>🏠 Inmobiliaria</h3>
 
-<h3>Inmobiliaria</h3>
+            <ul>
 
-<p>
-Te acompañamos en la compra, venta y comercialización de propiedades.
-</p>
+                <li>Compra y venta de terrenos</li>
 
-<ul>
-<li>✓ Compra y venta de terrenos</li>
-<li>✓ Compra y venta de casas</li>
-<li>✓ Comercialización de propiedades</li>
-<li>✓ Asesoría inmobiliaria</li>
-<li>✓ Apoyo para construir tu hogar en tu terreno</li>
-</ul>
+                <li>Compra y venta de casas</li>
 
-</div>
+                <li>Comercialización de propiedades</li>
 
+                <li>Asesoría inmobiliaria</li>
 
-<div class="servicio">
+                <li>Opciones de pago y crédito</li>
 
-<div class="icono">📐</div>
+                <li>Apoyo para construir tu hogar en tu terreno</li>
 
-<h3>Ingeniería</h3>
+            </ul>
 
-<p>
-Soluciones técnicas para proyectos de construcción e infraestructura.
-</p>
-
-<ul>
-<li>✓ Topografía GNSS / GPS</li>
-<li>✓ Brigada topográfica</li>
-<li>✓ Construcción</li>
-<li>✓ Infraestructura industrial</li>
-<li>✓ Instalaciones</li>
-<li>✓ Impermeabilización</li>
-<li>✓ Pintura</li>
-</ul>
-
-</div>
+        </div>
 
 
-<div class="servicio">
+        <div class="service-box">
 
-<div class="icono">🏗️</div>
+            <h3>📐 Arquitectura</h3>
 
-<h3>Arquitectura</h3>
+            <ul>
 
-<p>
-Diseñamos y desarrollamos proyectos pensando en funcionalidad y calidad.
-</p>
+                <li>Diseño de vivienda</li>
 
-<ul>
-<li>✓ Diseño de vivienda</li>
-<li>✓ Planos estructurales y cimentación</li>
-<li>✓ Instalaciones hidráulicas</li>
-<li>✓ Instalaciones sanitarias</li>
-<li>✓ Instalaciones eléctricas</li>
-<li>✓ Instalaciones de gas LP</li>
-<li>✓ Renders</li>
-<li>✓ Permisos</li>
-</ul>
+                <li>Planos estructurales y de cimentación</li>
 
-</div>
+                <li>Instalaciones hidráulicas y sanitarias</li>
 
+                <li>Instalaciones eléctricas</li>
 
-<div class="servicio">
+                <li>Instalaciones de gas LP</li>
 
-<div class="icono">⚖️</div>
+                <li>Renders</li>
 
-<h3>Servicios legales</h3>
+                <li>Permisos</li>
 
-<p>
-Asesoría y acompañamiento en procesos relacionados con operaciones inmobiliarias.
-</p>
+            </ul>
 
-<ul>
-<li>✓ Asesoría inmobiliaria</li>
-<li>✓ Contratos</li>
-<li>✓ Regularización</li>
-<li>✓ Registro Público</li>
-<li>✓ Gestión de escrituras</li>
-<li>✓ Trámites Infonavit</li>
-<li>✓ Trámites FOVISSSTE</li>
-</ul>
-
-</div>
+        </div>
 
 
-</div>
+        <div class="service-box">
 
-</div>
+            <h3>🏗️ Ingeniería</h3>
 
-</section>
+            <ul>
+
+                <li>Topografía GNSS / GPS</li>
+
+                <li>Brigada topográfica</li>
+
+                <li>Construcción</li>
+
+                <li>Infraestructura industrial</li>
+
+                <li>Instalaciones</li>
+
+                <li>Impermeabilización</li>
+
+                <li>Pintura</li>
+
+            </ul>
+
+        </div>
 
 
-<!-- ================= NOSOTROS ================= -->
+        <div class="service-box">
 
-<section id="nosotros">
+            <h3>⚖️ Servicios Legales</h3>
 
-<div class="nosotros">
+            <ul>
 
-<div class="titulo">
+                <li>Asesoría inmobiliaria</li>
 
-<h2>Sobre <span>Inmobiliaria Linda Vista</span></h2>
+                <li>Contratos</li>
 
-</div>
+                <li>Regularización de propiedades</li>
 
-<p>
-En <strong>Inmobiliaria Linda Vista</strong> trabajamos para ofrecer
-atención profesional, confianza y seguridad en cada operación.
-</p>
+                <li>Trámites ante Registro Público</li>
 
-<p>
-Nuestro objetivo es acompañarte durante el proceso de compra,
-venta, construcción y desarrollo de tu patrimonio.
-</p>
+                <li>Gestión de escrituras</li>
 
-<p>
-Integramos servicios inmobiliarios, ingeniería, arquitectura y
-asesoría legal para brindarte soluciones completas de acuerdo
-con las necesidades de cada proyecto.
-</p>
+                <li>Trámites Infonavit</li>
 
-</div>
+                <li>Trámites FOVISSSTE</li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<!-- ================= CONTACTO ================= -->
+<!-- NOSOTROS -->
 
-<section class="contacto" id="contacto">
+<section class="about" id="nosotros">
 
-<div class="contenedor">
+    <div class="section-title">
 
-<div class="titulo">
+        <h2>Sobre Nosotros</h2>
 
-<h2>Contáctanos</h2>
+        <span></span>
 
-<p>
-Estamos para ayudarte con tu próxima propiedad o proyecto.
-</p>
-
-</div>
+    </div>
 
 
-<div class="contacto-grid">
+    <div class="about-content">
 
+        <h3>INMOBILIARIA LINDA VISTA</h3>
 
-<div class="contacto-card">
+        <p>
+            Somos una empresa dedicada a brindar soluciones integrales
+            en materia inmobiliaria, arquitectura, ingeniería y servicios legales.
+        </p>
 
-<div class="icono">📱</div>
+        <p>
+            Nuestro objetivo es acompañarte durante cada etapa de tu proyecto,
+            desde la búsqueda y adquisición de un terreno o propiedad,
+            hasta el diseño, construcción y regularización.
+        </p>
 
-<h3>WhatsApp</h3>
+        <p>
+            Trabajamos con profesionalismo, confianza y seguridad
+            para ayudarte a tomar las mejores decisiones.
+        </p>
 
-<p>
-<a href="https://wa.me/522482689365">
-248 268 9365
-</a>
-</p>
+        <p>
+            <strong>
+                Construye tu hogar, desarrolla tu proyecto y hazlo con el respaldo
+                de profesionales.
+            </strong>
+        </p>
 
-<p>
-<a href="https://wa.me/522481631975">
-248 163 1975
-</a>
-</p>
-
-</div>
-
-
-<div class="contacto-card">
-
-<div class="icono">✉️</div>
-
-<h3>Correo electrónico</h3>
-
-<p>
-<a href="mailto:inmlindavista@gmail.com">
-inmlindavista@gmail.com
-</a>
-</p>
-
-</div>
-
-
-<div class="contacto-card">
-
-<div class="icono">📍</div>
-
-<h3>Oficina</h3>
-
-<p>
-<strong>Prolongación Colosio #1</strong>
-</p>
-
-<p>
-Tepetitla de Lardizabal, Tlaxcala
-</p>
-
-<p>
-Pasando Farmacias 24 hrs.
-</p>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- ================= HORARIOS ================= -->
+<!-- CONTACTO -->
 
-<section class="horarios">
+<section class="contact" id="contacto">
 
-<div class="contenedor">
+    <div class="section-title">
 
-<div class="titulo">
+        <h2>Contáctanos</h2>
 
-<h2>Horario de atención</h2>
+        <span></span>
 
-</div>
+    </div>
 
-<div class="horarios-box">
 
-<p>
-<strong>Martes a viernes:</strong><br>
-9:00 a.m. – 6:00 p.m.
-</p>
+    <div class="contact-grid">
 
-<p>
-<strong>Sábado y domingo:</strong><br>
-9:00 a.m. – 2:00 p.m.
-</p>
 
-</div>
+        <div class="contact-box">
 
-</div>
+            <h3>📱 WhatsApp</h3>
+
+            <p>248 268 9365</p>
+
+            <a
+                href="https://wa.me/522482689365"
+                target="_blank"
+                class="whatsapp"
+            >
+                WhatsApp
+            </a>
+
+            <p style="margin-top:15px;">
+                248 163 1975
+            </p>
+
+            <a
+                href="https://wa.me/522481631975"
+                target="_blank"
+                class="whatsapp"
+            >
+                WhatsApp
+            </a>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>✉️ Correo electrónico</h3>
+
+            <p>
+                <a href="mailto:inmlindavista@gmail.com">
+                    inmlindavista@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>📍 Oficina</h3>
+
+            <p>
+                PROLONGACION COLOSIO #1
+            </p>
+
+            <p>
+                TEPETITLA DE LARDIZABAL,
+                TLAXCALA
+            </p>
+
+            <p style="margin-top:10px;">
+                Pasando Farmacias 24hrs
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>🕐 Horarios</h3>
+
+            <p>
+                <strong>Martes – Viernes</strong><br>
+                9:00 a.m. – 6:00 p.m.
+            </p>
+
+            <p style="margin-top:10px;">
+                <strong>Sábado – Domingo</strong><br>
+                9:00 a.m. – 2:00 p.m.
+            </p>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<!-- ================= CTA ================= -->
-
-<section class="cta">
-
-<div class="contenedor">
-
-<h2>
-¿Buscas una propiedad?
-</h2>
-
-<p>
-Permítenos ayudarte a encontrar una opción adecuada para ti.
-</p>
-
-<a class="boton boton-dorado"
-href="https://wa.me/522482689365?text=Hola%20Inmobiliaria%20Linda%20Vista,%20quiero%20informaci%C3%B3n%20sobre%20sus%20propiedades.">
-Hablar por WhatsApp
-</a>
-
-</div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
-<img src="logo.jpg" alt="Inmobiliaria Linda Vista">
+    <p>
+        © 2026
+        <strong>INMOBILIARIA LINDA VISTA</strong>
+    </p>
 
-<p>
-<strong>INMOBILIARIA LINDA VISTA</strong>
-</p>
+    <p>
+        Bienes Raíces · Arquitectura · Ingeniería · Servicios Legales
+    </p>
 
-<p>
-Tu vista al futuro comienza aquí
-</p>
-
-<p>
-© 2026 Inmobiliaria Linda Vista. Todos los derechos reservados.
-</p>
-
-<p class="footer-dorado">
-Prolongación Colosio #1 · Tepetitla de Lardizabal · Tlaxcala
-</p>
+    <p style="margin-top:10px;">
+        Profesionalismo · Confianza · Seguridad
+    </p>
 
 </footer>
 
 
-<!-- ================= BOTÓN WHATSAPP ================= -->
+<!-- WHATSAPP FLOTANTE -->
 
 <a
-class="whatsapp"
-href="https://wa.me/522482689365?text=Hola%20Inmobiliaria%20Linda%20Vista,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
-target="_blank"
-aria-label="WhatsApp">
-💬
+    href="https://wa.me/522482689365"
+    target="_blank"
+    class="float-whatsapp"
+    title="Contactar por WhatsApp"
+>
+    ☎
 </a>
 
 
 </body>
 </html>
+```

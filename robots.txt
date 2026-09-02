@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inmlindavista-stack.github.io/inmobiliaria-linda-vista/sitemap.xml

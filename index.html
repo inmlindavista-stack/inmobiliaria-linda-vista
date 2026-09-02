@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inmobiliaria Linda Vista</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f7f3;
+            color: #142943;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: white;
+            padding: 15px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #142943;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c6922e;
+        }
+
+        /* PORTADA */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background:
+                linear-gradient(rgba(20,41,67,0.75), rgba(20,41,67,0.75)),
+                url("logo.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #d4a23c;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 35px;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #c6922e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #a87920;
+            transform: translateY(-2px);
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 70px 8%;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .titulo h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .titulo p {
+            color: #666;
+        }
+
+        /* PROPIEDADES */
+        .propiedades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .imagen-propiedad {
+            height: 200px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+        }
+
+        .contenido {
+            padding: 22px;
+        }
+
+        .contenido h3 {
+            margin-bottom: 10px;
+        }
+
+        .precio {
+            color: #c6922e;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 12px 0;
+        }
+
+        /* SERVICIOS */
+        .servicios {
+            background: #142943;
+            color: white;
+        }
+
+        .servicios .titulo p {
+            color: #ddd;
+        }
+
+        .lista-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .servicio {
+            padding: 30px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .servicio h3 {
+            color: #d4a23c;
+            margin-bottom: 10px;
+        }
+
+        /* NOSOTROS */
+        .nosotros {
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .nosotros p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* CONTACTO */
+        .contacto {
+            text-align: center;
+            background: #eeeae0;
+        }
+
+        .contacto p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        /* PIE */
+        footer {
+            background: #0c1c2e;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <img src="logo.jpg" alt="Inmobiliaria Linda Vista" class="logo">
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#propiedades">Propiedades</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <h1>
+                Inmobiliaria
+                <span>Linda Vista</span>
+            </h1>
+
+            <p>
+                Tu vista al futuro comienza aquí
+            </p>
+
+            <a href="#propiedades" class="boton">
+                Ver propiedades
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROPIEDADES -->
+    <section id="propiedades">
+
+        <div class="titulo">
+
+            <h2>Propiedades destacadas</h2>
+
+            <p>
+                Encuentra el espacio ideal para ti
+            </p>
+
+        </div>
+
+
+        <div class="propiedades">
+
+            <div class="tarjeta">
+
+                <div class="imagen-propiedad">
+                    Próximamente
+                </div>
+
+                <div class="contenido">
+
+                    <h3>Terreno en venta</h3>
+
+                    <p>
+                        Excelente ubicación y oportunidad
+                        de inversión.
+                    </p>
+
+                    <div class="precio">
+                        $000,000
+                    </div>
+
+                    <a href="#contacto" class="boton">
+                        Más información
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="imagen-propiedad">
+                    Próximamente
+                </div>
+
+                <div class="contenido">
+
+                    <h3>Casa en venta</h3>
+
+                    <p>
+                        Espacio ideal para tu familia.
+                    </p>
+
+                    <div class="precio">
+                        $000,000
+                    </div>
+
+                    <a href="#contacto" class="boton">
+                        Más información
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="imagen-propiedad">
+                    Próximamente
+                </div>
+
+                <div class="contenido">
+
+                    <h3>Lote en venta</h3>
+
+                    <p>
+                        Una excelente opción para construir.
+                    </p>
+
+                    <div class="precio">
+                        $000,000
+                    </div>
+
+                    <a href="#contacto" class="boton">
+                        Más información
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICIOS -->
+    <section class="servicios" id="servicios">
+
+        <div class="titulo">
+
+            <h2>Servicios</h2>
+
+            <p>
+                Soluciones profesionales para tus proyectos
+            </p>
+
+        </div>
+
+
+        <div class="lista-servicios">
+
+            <div class="servicio">
+                <h3>Inmobiliaria</h3>
+                <p>
+                    Compra, venta y asesoría inmobiliaria.
+                </p>
+            </div>
+
+            <div class="servicio">
+                <h3>Ingeniería</h3>
+                <p>
+                    Soluciones técnicas para tus proyectos.
+                </p>
+            </div>
+
+            <div class="servicio">
+                <h3>Arquitectura</h3>
+                <p>
+                    Diseño y desarrollo de proyectos.
+                </p>
+            </div>
+
+            <div class="servicio">
+                <h3>Servicios legales</h3>
+                <p>
+                    Asesoría para operaciones inmobiliarias.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NOSOTROS -->
+    <section id="nosotros">
+
+        <div class="nosotros">
+
+            <div class="titulo">
+                <h2>Nosotros</h2>
+            </div>
+
+            <p>
+                En Inmobiliaria Linda Vista trabajamos para ofrecer
+                atención profesional, confianza y seguridad en cada
+                operación inmobiliaria.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+
+        <div class="titulo">
+
+            <h2>Contáctanos</h2>
+
+            <p>
+                Estamos para ayudarte a encontrar tu próxima propiedad.
+            </p>
+
+        </div>
+
+        <p>📱 WhatsApp: Próximamente</p>
+        <p>☎️ Teléfono: Próximamente</p>
+        <p>✉️ Correo: Próximamente</p>
+        <p>📍 Ubicación: Tepetitla, Tlaxcala</p>
+
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 Inmobiliaria Linda Vista
+        </p>
+
+        <p>
+            Tu vista al futuro comienza aquí
+        </p>
+
+    </footer>
+
+</body>
+</html>
